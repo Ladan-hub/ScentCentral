@@ -16,6 +16,32 @@ router.get('/', asyncHandler(async function(req,res) {
     return res.json(boutiques)
 }));
 
+// GET boutique detail
+router.get('/:id', asyncHandler(async(req,res) => {
+    const boutique = await db.Boutique.findOne({
+        where: {
+            id: req.params.id
+        }
+    });
+    return res.json(boutique)
+}))
+
+// GET user's boutiques
+// router.get('/owned', asyncHandler(async(req,res) => {
+//     const { user } = req;
+
+//     const boutiques = await db.Boutique.findAll({
+//         where: {
+//             userId: user.id
+//         }
+//     })
+//     return res.json(boutiques)
+// }))
+
+// // router.get('/owned', asyncHandler(async function(req,res) {
+// //     const boutiques = await db.Boutique.findAll();
+// //     return res.json(boutiques)
+// // }));
 
 
 

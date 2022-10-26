@@ -5,6 +5,8 @@ import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 import Boutiques from "./components/Boutiques";
+import BoutiqueDetail from "./components/BoutiqueDetailPage";
+import OwnedBoutiques from "./components/OwnedBoutiques/OwnedBoutiques";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +22,12 @@ function App() {
         <Switch>
           <Route path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route exact path="/boutiques/owned">
+            <OwnedBoutiques />
+          </Route>
+          <Route exact path="/boutiques/:boutiqueId">
+            <BoutiqueDetail />
           </Route>
           <Route exact path='/'>
             <Boutiques />
