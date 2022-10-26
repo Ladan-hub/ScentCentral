@@ -3,27 +3,34 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { readBoutiquesThunk } from "../../store/boutiques";
 
-import "./Boutiques.css"
-
+// import {readBoutiquesOwnedThunk} from "../../store/boutiques";
 
 
-const Boutiques = () => {
+import "./OwnedBoutiques.css"
 
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(readBoutiquesThunk())
-    }, [dispatch])
 
-    // UseSelectors
-    const boutiques = useSelector(state => Object.values(state.boutiques));
 
-    const history = useHistory()
+const OwnedBoutiques = () => {
+
+    // const dispatch = useDispatch();
+    // useEffect(() => {
+    //     dispatch((readBoutiquesOwnedThunk()))
+    // }, [dispatch])
+
+    // // UseSelectors
+    // const boutiques = useSelector(state => Object.values(state.boutiques));
+    // console.log(boutiques);
+
+    // const history = useHistory()
 
     return (
-        <main className="splash-page">
-            <section className="all-boutiques-container">
+        <main className="owner-root-container">
+            <section className="title-and-create-button-container">
+                <h1>Welcome!</h1>
+                <button>Add a New Boutique</button>
+            </section>
+            {/* <section className="owned-boutiques-container">
                 {boutiques.map((boutique) => (
                     <span className="one-boutique-container" key={boutique.id} >
                         <span className="one-boutique">
@@ -36,7 +43,7 @@ const Boutiques = () => {
 
                 ))}
 
-            </section>
+            </section> */}
 
         </main>
     )
@@ -44,4 +51,4 @@ const Boutiques = () => {
 }
 
 
-export default Boutiques;
+export default OwnedBoutiques;

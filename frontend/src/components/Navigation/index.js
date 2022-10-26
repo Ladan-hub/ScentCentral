@@ -7,6 +7,7 @@ import './Navigation.css';
 
 function Navigation({ isLoaded }){
   const sessionUser = useSelector(state => state.session.user);
+  const loggedInUser = useSelector(state => state.session.user);
 
   let sessionLinks;
   if (sessionUser) {
@@ -27,6 +28,9 @@ function Navigation({ isLoaded }){
       <li>
         <NavLink exact to="/">Home</NavLink>
         {isLoaded && sessionLinks}
+      </li>
+      <li>
+      {loggedInUser ? <NavLink  className="NavLink-add-boutique" to="/boutiques/owned">Become a host</NavLink> : null}
       </li>
     </ul>
   );
