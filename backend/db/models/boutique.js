@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   Boutique.associate = function(models) {
     // associations can be defined here
     Boutique.belongsTo(models.User, {foreignKey: 'userId'})
-    Boutique.hasMany(models.Review, {foreignKey: 'boutiqueId'})
+    Boutique.hasMany(models.Review, {foreignKey: 'boutiqueId', onDelete: "cascade", hooks:true})
   };
   return Boutique;
 };
