@@ -4,7 +4,10 @@ import { csrfFetch } from "./csrf";
 
 const READ_BOUTIQUES = "boutiques/READ";
 const READ_BOUTIQUE_DETAIL = "boutiques/DETAIL";
-const READ_OWNED_BOUTIQUE = "boutiques/OWNED"
+// const READ_OWNED_BOUTIQUE = "boutiques/OWNED"
+const CREATE = "boutique/CREATE";
+
+
 
 
 
@@ -33,7 +36,13 @@ export const readBoutiqueDetail = (boutique) => {
 //     };
 //   };
 
-
+// AC for CREATE 
+export const createBoutiqueAction = (boutique) => {
+  return {
+      type: CREATE,
+      boutique
+  }
+}
 
 
 // Thunk Action Creators:
@@ -71,6 +80,20 @@ export const readBoutiqueDetailThunk = (boutiqueId) => async (dispatch) => {
 //   };
 
 
+// Thunk AC CREATE
+export const addBoutiqueThunk = (boutiqueToCreate) => async dispatch => {
+  const response = await csrfFetch ('/api/boutiques', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(boutiqueToCreate)
+  })
+  if (response.ok) {
+    const newlyCreatedBoutique = await response.json();
+    dispatch(createBoutiqueAction(newlyCreatedBoutique));
+    return newlyCreatedBoutique;
+  };
+};
+
 
 // Reducer
 
@@ -95,6 +118,10 @@ const boutiqueReducer = (state = {}, action) => {
     //     });
     //     return boutiquesLoaded;
     // }
+
+    case CREATE: {
+      return { ...state, [action.boutique.id]: action.boutique}
+    }
     default:
       return state;
   }

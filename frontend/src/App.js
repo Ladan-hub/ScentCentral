@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 import Boutiques from "./components/Boutiques";
 import BoutiqueDetail from "./components/BoutiqueDetailPage";
 import OwnedBoutiques from "./components/OwnedBoutiques/OwnedBoutiques";
+import CreateBoutiqueForm from "./components/CreateBoutiqueForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route exact path='/'>
             <Boutiques />
+          </Route>
+          <Route path="/new">
+            <CreateBoutiqueForm />
           </Route>
         </Switch>
       )}

@@ -2,35 +2,37 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
-// import {readBoutiquesOwnedThunk} from "../../store/boutiques";
+import {readBoutiquesOwnedThunk} from "../../store/boutiques";
 
-
-import "./OwnedBoutiques.css"
-
-
+import "./OwnedBoutiques.css";
 
 const OwnedBoutiques = () => {
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //     dispatch((readBoutiquesOwnedThunk()))
+  // }, [dispatch])
 
-    // const dispatch = useDispatch();
-    // useEffect(() => {
-    //     dispatch((readBoutiquesOwnedThunk()))
-    // }, [dispatch])
+  // // UseSelectors
+  // const boutiques = useSelector(state => Object.values(state.boutiques));
+  // console.log(boutiques);
 
-    // // UseSelectors
-    // const boutiques = useSelector(state => Object.values(state.boutiques));
-    // console.log(boutiques);
+  // const history = useHistory()
 
-    // const history = useHistory()
-
-    return (
-        <main className="owner-root-container">
-            <section className="title-and-create-button-container">
-                <h1>Welcome!</h1>
-                <button>Add a New Boutique</button>
-            </section>
-            {/* <section className="owned-boutiques-container">
+  return (
+    <main className="owner-root-container">
+      <section className="title-and-create-button-container">
+        <h1>Welcome!</h1>
+      </section>
+      <div>
+        <NavLink to="/new">
+          <div>
+            Add a New Boutique
+          </div>
+        </NavLink>
+      </div>
+      {/* <section className="owned-boutiques-container">
                 {boutiques.map((boutique) => (
                     <span className="one-boutique-container" key={boutique.id} >
                         <span className="one-boutique">
@@ -44,11 +46,8 @@ const OwnedBoutiques = () => {
                 ))}
 
             </section> */}
-
-        </main>
-    )
-
-}
-
+    </main>
+  );
+};
 
 export default OwnedBoutiques;
