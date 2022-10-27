@@ -9,16 +9,16 @@ import {readBoutiquesOwnedThunk} from "../../store/boutiques";
 import "./OwnedBoutiques.css";
 
 const OwnedBoutiques = () => {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //     dispatch((readBoutiquesOwnedThunk()))
-  // }, [dispatch])
+  const dispatch = useDispatch();
+  useEffect(() => {
+      dispatch((readBoutiquesOwnedThunk()))
+  }, [dispatch])
 
-  // // UseSelectors
-  // const boutiques = useSelector(state => Object.values(state.boutiques));
-  // console.log(boutiques);
+  // UseSelectors
+  const boutiques = useSelector(state => Object.values(state.boutiques));
+  console.log(boutiques);
 
-  // const history = useHistory()
+  const history = useHistory()
 
   return (
     <main className="owner-root-container">
@@ -32,7 +32,7 @@ const OwnedBoutiques = () => {
           </div>
         </NavLink>
       </div>
-      {/* <section className="owned-boutiques-container">
+      <section className="owned-boutiques-container">
                 {boutiques.map((boutique) => (
                     <span className="one-boutique-container" key={boutique.id} >
                         <span className="one-boutique">
@@ -45,7 +45,7 @@ const OwnedBoutiques = () => {
 
                 ))}
 
-            </section> */}
+            </section>
     </main>
   );
 };
