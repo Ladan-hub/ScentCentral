@@ -21,6 +21,40 @@ router.get(
   })
 );
 
+// GET user's boutiques (READ)
+router.get(
+  "/owned",
+  restoreUser,
+  asyncHandler(async (req, res) => {
+    
+
+    const { user } = req;
+
+    const boutiques = await db.Boutique.findAll({
+      where: {
+        userId: user.id
+      },
+    });
+
+    
+    return res.json(boutiques);
+   
+  })
+);
+
+// DELETE deleteing a boutique (DELETE)
+router.delete('/delete', requireAuth, asyncHandler(async(req,res) => {
+  const boutiqueToBeDeleted = await db.Boutique.findOne({
+    where: {
+      id: req.body.id
+    }
+  })
+  await boutiqueToBeDeleted.destroy()
+  return res.json(boutiqueToBeDeleted)
+}))
+
+
+
 // GET boutique detail (READ)
 router.get(
   "/:id",
@@ -34,25 +68,6 @@ router.get(
   })
 );
 
-// GET user's boutiques (READ)
-router.get(
-  "/owned",
-  // restoreUser,
-  asyncHandler(async (req, res) => {
-    console.log("HELLO FROM OWNED ROUTE")
-    // const { user } = req;
-    // console.log("THIS IS THE USER", user);
-
-    // const boutiques = await db.Boutique.findAll({
-    //   where: {
-    //     userId: 1
-    //   },
-    // });
-    // const boutiques = await db.Boutique.findAll()
-    // return res.json(boutiques);
-    return res.json({ hello: "world" });
-  })
-);
 
 // POST uploading a boutique (CREATE)
 router.post(
@@ -64,5 +79,7 @@ router.post(
     return res.json(newlyCreatedBoutique);
   })
 );
+
+
 
 module.exports = router;

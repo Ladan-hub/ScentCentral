@@ -6,6 +6,7 @@ const READ_BOUTIQUES = "boutiques/READ";
 const READ_BOUTIQUE_DETAIL = "boutiques/DETAIL";
 const READ_OWNED_BOUTIQUE = "boutiques/OWNED";
 const CREATE = "boutique/CREATE";
+const DELETE = "boutique/DELETE";
 
 // Action Creators:
 
@@ -41,9 +42,20 @@ export const createBoutiqueAction = (boutique) => {
   };
 };
 
-// Thunk Action Creators:
+// AC for DELETE
 
-// Thunk AC for fetching all boutiques from the database
+export const deleteBoutiqueAction = (boutiqueId) => {
+  return {
+    type: DELETE,
+    boutiqueId
+  }
+}
+
+
+
+// Thunks: 
+
+// Thunk for fetching all boutiques from the database
 export const readBoutiquesThunk = () => async (dispatch) => {
   const response = await csrfFetch("/api/boutiques/");
   if (response.ok) {
@@ -53,7 +65,7 @@ export const readBoutiquesThunk = () => async (dispatch) => {
   }
 };
 
-// Thunk AC for fetching one boutique from the database
+// Thunk for fetching one boutique from the database
 export const readBoutiqueDetailThunk = (boutiqueId) => async (dispatch) => {
   console.log("HELLO FROM THUNK");
   const response = await csrfFetch(`/api/boutiques/${boutiqueId}`);
@@ -65,20 +77,21 @@ export const readBoutiqueDetailThunk = (boutiqueId) => async (dispatch) => {
   }
 };
 
-// Thunk AC for fetching all owned boutiques from the database
+// Thunk for fetching all owned boutiques from the database
 export const readBoutiquesOwnedThunk = () => async (dispatch) => {
   console.log("HELLO FROM THUNK");
   const response = await csrfFetch("/api/boutiques/owned");
   if (response.ok) {
     console.log("RESPONSE WAS OK");
     const boutiques = await response.json();
+    console.log(boutiques)
     dispatch(readBoutiquesOwned(boutiques));
     return boutiques;
   }
   return {hello:"world"};
 };
 
-// Thunk AC CREATE
+// Thunk CREATE
 export const addBoutiqueThunk = (boutiqueToCreate) => async (dispatch) => {
   const response = await csrfFetch("/api/boutiques", {
     method: "POST",
@@ -91,6 +104,22 @@ export const addBoutiqueThunk = (boutiqueToCreate) => async (dispatch) => {
     return newlyCreatedBoutique;
   }
 };
+
+// THUNK DELETE
+export const deleteBoutiqueThunk = (boutique) => async dispatch => {
+  const response = await csrfFetch('/api/boutiques/delete', {
+    method: 'DELETE',
+    body: JSON.stringify(boutique)
+  })
+  if (response.ok) {
+    const boutiqueToBeDeleted = await response.json();
+    dispatch(deleteBoutiqueAction(boutiqueToBeDeleted.id))
+    return boutiqueToBeDeleted;
+  }
+}
+
+
+
 
 // Reducer
 
@@ -108,20 +137,26 @@ const boutiqueReducer = (state = {}, action) => {
       detailLoaded[action.boutique.id] = action.boutique;
       return detailLoaded;
     }
-    // case READ_OWNED_BOUTIQUE: {
-    //     const boutiquesLoaded = {};
-    //     action.boutiques.forEach((boutique) => {
-    //         boutiquesLoaded[boutique.id] = boutique;
-    //     });
-    //     return boutiquesLoaded;
-    // }
-
+    case READ_OWNED_BOUTIQUE: {
+        const boutiquesLoaded = {};
+        action.boutiques.forEach((boutique) => {
+            boutiquesLoaded[boutique.id] = boutique;
+        });
+        return boutiquesLoaded;
+    }
     case CREATE: {
       return { ...state, [action.boutique.id]: action.boutique };
+    }
+    case DELETE: {
+      const newState = {...state};
+      delete newState[action.boutiqueId]
+      return newState;
     }
     default:
       return state;
   }
+
+  
 };
 
 export default boutiqueReducer;
