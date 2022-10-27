@@ -4,7 +4,11 @@ const db = require("../../db/models");
 const asyncHandler = require("express-async-handler");
 const { check } = require("express-validator");
 const { handleValidationErrors } = require("../../utils/validation");
-const { requireAuth } = require("../../utils/auth");
+const {
+  setTokenCookie,
+  restoreUser,
+  requireAuth,
+} = require("../../utils/auth");
 
 // Don't forget to write validations
 
@@ -17,7 +21,41 @@ router.get(
   })
 );
 
-// GET boutique detail
+// GET user's boutiques (READ)
+router.get(
+  "/owned",
+  restoreUser,
+  asyncHandler(async (req, res) => {
+    
+
+    const { user } = req;
+
+    const boutiques = await db.Boutique.findAll({
+      where: {
+        userId: user.id
+      },
+    });
+
+    
+    return res.json(boutiques);
+   
+  })
+);
+
+// DELETE deleteing a boutique (DELETE)
+router.delete('/delete', requireAuth, asyncHandler(async(req,res) => {
+  const boutiqueToBeDeleted = await db.Boutique.findOne({
+    where: {
+      id: req.body.id
+    }
+  })
+  await boutiqueToBeDeleted.destroy()
+  return res.json(boutiqueToBeDeleted)
+}))
+
+
+
+// GET boutique detail (READ)
 router.get(
   "/:id",
   asyncHandler(async (req, res) => {
@@ -30,29 +68,18 @@ router.get(
   })
 );
 
-// GET user's boutiques
-// router.get('/owned', asyncHandler(async(req,res) => {
-//     const { user } = req;
-//     console.log(user)
-
-//     const boutiques = await db.Boutique.findAll({
-//         where: {
-//             userId: user.id
-//         }
-//     })
-//     return res.json(boutiques)
-// }))
-
-// router.get('/owned', asyncHandler(async function(req,res) {
-//     const boutiques = await db.Boutique.findAll();
-//     return res.json(boutiques)
-// }));
 
 // POST uploading a boutique (CREATE)
-router.post("/", requireAuth, asyncHandler(async (req,res) => {
-    const boutiqueToCreate = req.body
-    const newlyCreatedBoutique = await db.Boutique.create(boutiqueToCreate)
-    return res.json(newlyCreatedBoutique)
-}));
+router.post(
+  "/",
+  requireAuth,
+  asyncHandler(async (req, res) => {
+    const boutiqueToCreate = req.body;
+    const newlyCreatedBoutique = await db.Boutique.create(boutiqueToCreate);
+    return res.json(newlyCreatedBoutique);
+  })
+);
+
+
 
 module.exports = router;
