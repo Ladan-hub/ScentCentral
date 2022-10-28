@@ -4,9 +4,9 @@ import { csrfFetch } from "./csrf";
 const READ_BOUTIQUES = "boutiques/READ";
 const READ_BOUTIQUE_DETAIL = "boutiques/DETAIL";
 const READ_OWNED_BOUTIQUE = "boutiques/OWNED";
-const CREATE = "boutique/CREATE";
-const DELETE = "boutique/DELETE";
-const UPDATE= 'boutique/UPDATE'
+const CREATE = "boutiques/CREATE";
+const DELETE = "boutiques/DELETE";
+const UPDATE= 'boutiques/UPDATE'
 
 // Action Creators:
 
