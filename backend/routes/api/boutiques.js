@@ -12,6 +12,7 @@ const {
 
 // Don't forget to write validations
 
+
 // GET all boutiques (READ)
 router.get(
   "/",
@@ -21,38 +22,55 @@ router.get(
   })
 );
 
+
+
 // GET user's boutiques (READ)
 router.get(
   "/owned",
   restoreUser,
   asyncHandler(async (req, res) => {
-    
-
     const { user } = req;
 
     const boutiques = await db.Boutique.findAll({
       where: {
-        userId: user.id
+        userId: user.id,
       },
     });
 
-    
     return res.json(boutiques);
-   
   })
 );
 
 // DELETE deleteing a boutique (DELETE)
-router.delete('/delete', requireAuth, asyncHandler(async(req,res) => {
-  const boutiqueToBeDeleted = await db.Boutique.findOne({
-    where: {
-      id: req.body.id
-    }
+router.delete(
+  "/delete",
+  requireAuth,
+  asyncHandler(async (req, res) => {
+    const boutiqueToBeDeleted = await db.Boutique.findOne({
+      where: {
+        id: req.body.id,
+      },
+    });
+    await boutiqueToBeDeleted.destroy();
+    return res.json(boutiqueToBeDeleted);
   })
-  await boutiqueToBeDeleted.destroy()
-  return res.json(boutiqueToBeDeleted)
-}))
+);
 
+// PUT updating a boutique (UPDATE)
+router.put(
+  "/:id",
+  requireAuth,
+  asyncHandler(async (req, res) => {
+    const oldBoutique = await db.Boutique.findOne({
+      where: {
+        id: req.body.id,
+      },
+    });
+    console.log("THIS IS THE OLD BOUTIQUE", oldBoutique)
+    const newBoutique = oldBoutique.update(req.body);
+    return res.json(newBoutique);
+  })
+);
 
 
 // GET boutique detail (READ)
@@ -79,7 +97,5 @@ router.post(
     return res.json(newlyCreatedBoutique);
   })
 );
-
-
 
 module.exports = router;

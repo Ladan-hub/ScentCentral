@@ -4,9 +4,10 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { NavLink, useHistory, useParams } from "react-router-dom";
 
-import { readBoutiquesOwnedThunk } from "../../store/boutiques";
+import { deleteBoutiqueThunk, readBoutiquesOwnedThunk } from "../../store/boutiques";
 
 import "./OwnedBoutiques.css";
+
 
 const OwnedBoutiques = () => {
   const dispatch = useDispatch();
@@ -14,11 +15,10 @@ const OwnedBoutiques = () => {
     dispatch(readBoutiquesOwnedThunk());
   }, [dispatch]);
 
-  const { boutiqueId } = useParams();
   // UseSelectors
   const boutiques = useSelector((state) => Object.values(state.boutiques));
 
-  const history = useHistory();
+  const history = useHistory()
 
   return (
     <main className="owner-root-container">

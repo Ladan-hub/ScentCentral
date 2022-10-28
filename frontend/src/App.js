@@ -8,6 +8,7 @@ import Boutiques from "./components/Boutiques";
 import BoutiqueDetail from "./components/BoutiqueDetailPage";
 import OwnedBoutiques from "./components/OwnedBoutiques/OwnedBoutiques";
 import CreateBoutiqueForm from "./components/CreateBoutiqueForm";
+import EditBoutiqueForm from "./components/EditBoutiqueForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -30,12 +31,16 @@ function App() {
           <Route exact path="/boutiques/:boutiqueId">
             <BoutiqueDetail />
           </Route>
-          <Route exact path='/'>
+          <Route exact path="/boutiques/:boutiqueId/edit">
+            <EditBoutiqueForm />
+          </Route>
+          <Route exact path="/">
             <Boutiques />
           </Route>
           <Route path="/new">
             <CreateBoutiqueForm />
           </Route>
+          
         </Switch>
       )}
     </>

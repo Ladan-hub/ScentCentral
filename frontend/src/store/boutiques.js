@@ -7,6 +7,7 @@ const READ_BOUTIQUE_DETAIL = "boutiques/DETAIL";
 const READ_OWNED_BOUTIQUE = "boutiques/OWNED";
 const CREATE = "boutique/CREATE";
 const DELETE = "boutique/DELETE";
+const UPDATE= 'boutique/UPDATE'
 
 // Action Creators:
 
@@ -42,15 +43,21 @@ export const createBoutiqueAction = (boutique) => {
   };
 };
 
-// AC for DELETE
+// AC for UPDATE
+export const updateBoutiqueAction = (boutique) => {
+  return {
+    type: UPDATE,
+    boutique
+  }
+}
 
+// AC for DELETE
 export const deleteBoutiqueAction = (boutiqueId) => {
   return {
     type: DELETE,
     boutiqueId
   }
 }
-
 
 
 // Thunks: 
@@ -105,7 +112,9 @@ export const addBoutiqueThunk = (boutiqueToCreate) => async (dispatch) => {
   }
 };
 
-// THUNK DELETE
+
+
+// Thunk DELETE
 export const deleteBoutiqueThunk = (boutique) => async dispatch => {
   const response = await csrfFetch('/api/boutiques/delete', {
     method: 'DELETE',
@@ -118,7 +127,19 @@ export const deleteBoutiqueThunk = (boutique) => async dispatch => {
   }
 }
 
-
+// Thunk UPDATE 
+export const updateBoutiqueThunk = (boutique) => async(dispatch) => {
+  const response = await csrfFetch(`/api/boutiques/${boutique.id}`, {
+    method: 'PUT',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(boutique)
+  })
+  if (response.ok) {
+    const boutique = await response.json();
+    dispatch(updateBoutiqueAction(boutique));
+    return boutique;
+  }
+}
 
 
 // Reducer
@@ -147,6 +168,11 @@ const boutiqueReducer = (state = {}, action) => {
     case CREATE: {
       return { ...state, [action.boutique.id]: action.boutique };
     }
+    case UPDATE: {
+      const newState = {...state};
+      newState[action.boutique.id] = action.boutique;
+    }
+
     case DELETE: {
       const newState = {...state};
       delete newState[action.boutiqueId]
@@ -155,8 +181,6 @@ const boutiqueReducer = (state = {}, action) => {
     default:
       return state;
   }
-
-  
 };
 
 export default boutiqueReducer;
