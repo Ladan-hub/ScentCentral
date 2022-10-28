@@ -9,6 +9,7 @@ import BoutiqueDetail from "./components/BoutiqueDetailPage";
 import OwnedBoutiques from "./components/OwnedBoutiques/OwnedBoutiques";
 import CreateBoutiqueForm from "./components/CreateBoutiqueForm";
 import EditBoutiqueForm from "./components/EditBoutiqueForm";
+import ReviewForm from "./components/LeaveReviewForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,13 +35,15 @@ function App() {
           <Route exact path="/boutiques/:boutiqueId/edit">
             <EditBoutiqueForm />
           </Route>
+          <Route exact path="/boutiques/:boutiqueId/review">
+            <ReviewForm />
+          </Route>
           <Route exact path="/">
             <Boutiques />
           </Route>
           <Route path="/new">
             <CreateBoutiqueForm />
           </Route>
-          
         </Switch>
       )}
     </>

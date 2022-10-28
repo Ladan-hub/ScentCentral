@@ -33,6 +33,11 @@ const BoutiqueDetail = () => {
     history.push(`/boutiques/${boutiqueId}/edit`)
   }
 
+  // Review button event handler
+  const reviewEventHandler = async () => {
+    history.push(`/boutiques/${boutiqueId}/review`)
+  }
+
   if (boutique) {
     return (
       <>
@@ -55,19 +60,22 @@ const BoutiqueDetail = () => {
         <div className="boutique-address-container">
           <div>{boutique.address}</div>
         </div>
-        {boutique?.userId === loggedInUser?.id ?   <span className="buttons-container">
+        <span className="buttons-container">
         <span className="delete-boutique-button-container">
-        <button
+        {boutique?.userId === loggedInUser?.id ? <button
             className="delete-boutique-button"
             onClick={deleteBoutiqueEventHandler}
           >
             Delete Boutique
-          </button>
+          </button> : null }
         </span>
         <span className="edit-boutique-button-container">
-          <button className="edit-boutique-button" onClick={editBoutiqueEventHandler}>Edit Boutique</button>
+        {boutique?.userId === loggedInUser?.id ?<button className="edit-boutique-button" onClick={editBoutiqueEventHandler}>Edit Boutique</button> : null }
         </span>
-        </span> : null }
+        <span className="review-button-container">
+          {boutique?.userId !== loggedInUser?.id ?<button className="review-button" onClick={reviewEventHandler}>Leave a Review</button> : null }
+        </span>
+        </span> 
       </>
     );
   }

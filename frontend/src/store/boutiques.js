@@ -1,7 +1,6 @@
 import { csrfFetch } from "./csrf";
 
 // Action Types:
-
 const READ_BOUTIQUES = "boutiques/READ";
 const READ_BOUTIQUE_DETAIL = "boutiques/DETAIL";
 const READ_OWNED_BOUTIQUE = "boutiques/OWNED";
