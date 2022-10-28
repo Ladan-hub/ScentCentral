@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { updateBoutiqueThunk } from "../../store/boutiques";
@@ -9,18 +9,21 @@ import "./EditBoutiqueForm.css";
 const EditBoutiqueForm = () => {
   const history = useHistory();
 
+  const { boutiqueId } = useParams();
   // logged in user
   const loggedInUser = useSelector((state) => state.session.user);
+  const boutique = useSelector((state) => state.boutiques[boutiqueId])
+  console.log("THIS IS THE BOUTIQUE", boutique)
 
-  const { boutiqueId } = useParams();
+
 
   // useStates
-  const [name, setName] = useState("");
-  const [country, setCountry] = useState("");
-  const [city, setCity] = useState("");
-  const [address, setAddress] = useState("");
-  const [priceRange, setPriceRange] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [name, setName] = useState(boutique.name);
+  const [country, setCountry] = useState(boutique.country);
+  const [city, setCity] = useState(boutique.city);
+  const [address, setAddress] = useState(boutique.address);
+  const [priceRange, setPriceRange] = useState(boutique.priceRange);
+  const [imageUrl, setImageUrl] = useState(boutique.imageUrl);
   const [validationErrors, setValidationErrors] = useState([]);
 
   // Validation Errors
@@ -98,18 +101,18 @@ const EditBoutiqueForm = () => {
     if (editedBoutique) {
       history.push('/boutiques/owned');
     }
-    reset();
+    // reset();
   };
 
-  const reset = () => {
-    setName("");
-    setCountry("");
-    setCity("");
-    setAddress("");
-    setPriceRange("");
-    setImageUrl("");
-    // history.push('/')
-  };
+  // const reset = () => {
+  //   setName("");
+  //   setCountry("");
+  //   setCity("");
+  //   setAddress("");
+  //   setPriceRange("");
+  //   setImageUrl("");
+  //   // history.push('/')
+  // };
 
   return (
     loggedInUser && (
