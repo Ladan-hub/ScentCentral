@@ -8,6 +8,7 @@ import "./BoutiqueDetailPage.css";
 const BoutiqueDetail = () => {
   const { boutiqueId } = useParams();
 
+  const loggedInUser = useSelector(state => state.session.user);
   const boutique = useSelector((state) => state.boutiques[boutiqueId]);
   // console.log(boutique);
 
@@ -54,9 +55,9 @@ const BoutiqueDetail = () => {
         <div className="boutique-address-container">
           <div>{boutique.address}</div>
         </div>
-        <span className="buttons-container">
+        {boutique?.userId === loggedInUser?.id ?   <span className="buttons-container">
         <span className="delete-boutique-button-container">
-          <button
+        <button
             className="delete-boutique-button"
             onClick={deleteBoutiqueEventHandler}
           >
@@ -66,7 +67,7 @@ const BoutiqueDetail = () => {
         <span className="edit-boutique-button-container">
           <button className="edit-boutique-button" onClick={editBoutiqueEventHandler}>Edit Boutique</button>
         </span>
-        </span>
+        </span> : null }
       </>
     );
   }
