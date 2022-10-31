@@ -1,6 +1,16 @@
 
-
 .boutique-image {
     width: 30%;
     height: 30%;
 }
+
+.all-boutiques-container {
+    margin: 3%;
+}
+
+.one-boutique{
+    width: 20%;
+    height: 20%;
+    padding: 5px;
+}
+

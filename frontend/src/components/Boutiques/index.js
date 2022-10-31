@@ -22,23 +22,26 @@ const Boutiques = () => {
     const history = useHistory()
 
     return (
-        <main className="splash-page">
+        
             <section className="all-boutiques-container">
                 {boutiques.map((boutique) => (
                     <span className="one-boutique-container" key={boutique.id} >
-                        <span className="one-boutique">
+        
+                            <span>
                             <img onClick={() => history.push(`/boutiques/${boutique.id}`)} className="boutique-image" src={boutique.imageUrl} alt="boutique preview" />
-                            <div className="boutique-name">{boutique.name}</div>
-                            <div className="boutique-country-city">{boutique.country}, {boutique.city}</div>
-                            <div className="boutique-price-range">{boutique.priceRange}</div>
-                        </span>
+                            </span>
+                           
+                            {/* <div className="boutique-name">{boutique.name}</div>
+                            {/* <div className="boutique-country-city">{boutique.country}, {boutique.city}</div>
+                            <div className="boutique-price-range">{boutique.priceRange}</div> */} 
+                        
                     </span>
 
                 ))}
 
             </section>
 
-        </main>
+
     )
 
 }
