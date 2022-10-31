@@ -1,4 +1,7 @@
 
+/* .boutiques-container{
+    display: flex;
+} */
 .boutique-image {
     width: 30%;
     height: 30%;
@@ -6,6 +9,8 @@
 
 .all-boutiques-container {
     margin: 3%;
+    display: flex;
+    flex-direction: row;
 }
 
 .one-boutique{

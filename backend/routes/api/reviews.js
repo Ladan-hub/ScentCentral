@@ -13,6 +13,7 @@ const {
 
 // POST creating a review (CREATE)
 router.post('/:id', requireAuth, asyncHandler(async (req,res) => {
+  console.log("POST!!!!!!!!!!!")
     
   const review = await db.Review.create(req.body)
   return res.json(review)
@@ -20,6 +21,7 @@ router.post('/:id', requireAuth, asyncHandler(async (req,res) => {
 
 // GET all reviews (READ)
 router.get('/:id', requireAuth, asyncHandler(async (req,res) => {
+  console.log("GET!!!!!!!!!!!")
   const reviews = await db.Review.findAll({
       where:{
           boutiqueId: req.params.id
@@ -45,12 +47,13 @@ return res.json(reviewToBeDeleted);
 
 // PUT updating a review (UPDATE) /api/reviews/:id
 router.put("/:id", requireAuth, asyncHandler(async (req,res) => {
+  // console.log("PUT!!!!!!!!!!!")
   const oldReview = await db.Review.findOne({
       where: {
           id: req.body.id
       }
   })
-  const newReview = oldReview.update(req.body);
+  const newReview = await oldReview.update(req.body);
 
   return res.json(newReview)
 }))

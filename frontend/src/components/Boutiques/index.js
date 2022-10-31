@@ -23,23 +23,30 @@ const Boutiques = () => {
 
     return (
         
-            <section className="all-boutiques-container">
+            <main className="all-boutiques-container">
                 {boutiques.map((boutique) => (
-                    <span className="one-boutique-container" key={boutique.id} >
+                    <main className="boutiques-container">
+                    <div className="boutique-image-container" key={boutique.id} >
         
-                            <span>
-                            <img onClick={() => history.push(`/boutiques/${boutique.id}`)} className="boutique-image" src={boutique.imageUrl} alt="boutique preview" />
-                            </span>
                            
-                            {/* <div className="boutique-name">{boutique.name}</div>
-                            {/* <div className="boutique-country-city">{boutique.country}, {boutique.city}</div>
-                            <div className="boutique-price-range">{boutique.priceRange}</div> */} 
+                            <img onClick={() => history.push(`/boutiques/${boutique.id}`)} className="boutique-image" src={boutique.imageUrl} alt="boutique preview" />
+                            </div>
+                            <div className="boutique-info-container">
+                           <div>
+                            {boutique.name}
+                            </div>
+                            <div>
+                            {boutique.country}, {boutique.city}
+                            </div>
+                            <div>
+                            {boutique.priceRange}
+                            </div>
                         
-                    </span>
-
+                        </div>
+                    </main>
                 ))}
 
-            </section>
+            </main>
 
 
     )

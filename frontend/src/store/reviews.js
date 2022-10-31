@@ -34,10 +34,11 @@ export const deleteReviewAction = (review) => {
 }
 
 // AC for updating a review (UPDATE)
-export const updateReviewAction = (editedReview) => {
+export const updateReviewAction = (review) => {
+    console.log("UPDATE REVIEW ACTION CREATOR")
     return {
         type: UPDATE,
-        editedReview
+        review
     }
 }
 
@@ -90,6 +91,7 @@ export const updateReviewThunk = (editedReview, reviewId) => async(dispatch) => 
     })
     if (response.ok) {
       const review = await response.json();
+      console.log("THIS IS REVIEW FROM BACKEND!!!", review)
       dispatch(updateReviewAction(review));
       return review;
     }
@@ -114,7 +116,10 @@ const reviewReducer = (state = {}, action) => {
         }
         case UPDATE: {
             const newState = {...state};
-            newState[action.editedReview.id] = action.editedReview;
+            newState[action.review.id] = action.review;
+            console.log("NEW STATE COMING FROM REDUCER!!!", newState, action.review.id)
+            return newState;
+
         }
         default:
             return state;

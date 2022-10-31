@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import {
@@ -9,7 +9,11 @@ import Review from "../Review";
 
 import "./BoutiqueDetailPage.css";
 
+
 const BoutiqueDetail = () => {
+
+  // const [editReview, setEditReview] = useState({});
+
   const { boutiqueId } = useParams();
 
   const loggedInUser = useSelector((state) => state.session.user);
@@ -18,6 +22,7 @@ const BoutiqueDetail = () => {
   console.log("This is the reviews array", reviews)
 
   const reviewsObj = useSelector((state) => state.reviews);
+  console.log("THIS IS REVIEWS OBJ", reviewsObj)
 
   // console.log(boutique);
 
@@ -91,7 +96,15 @@ const BoutiqueDetail = () => {
             ) : null}
           </span>
           <span className="review-button-container">
+            {/* {reviews.map((review) => {if (review.userId){
+              (
+                <div>
+                  <button>You already left a review!</button>
+                </div>
+              )
+            }})} */}
             { loggedInUser && boutique?.userId !== loggedInUser?.id ? (
+        
               <button className="review-button" onClick={reviewEventHandler}>
                 Leave a Review
               </button>
@@ -102,7 +115,7 @@ const BoutiqueDetail = () => {
           
             <section>
               <div>
-                <Review />
+                <Review  />
               </div>
             </section>
           
