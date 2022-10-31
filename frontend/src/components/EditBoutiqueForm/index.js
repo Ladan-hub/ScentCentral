@@ -13,8 +13,6 @@ const EditBoutiqueForm = () => {
   // logged in user
   const loggedInUser = useSelector((state) => state.session.user);
   const boutique = useSelector((state) => state.boutiques[boutiqueId])
-  console.log("THIS IS THE BOUTIQUE", boutique)
-
 
 
   // useStates

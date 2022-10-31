@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./Review.css";
-import { deleteReviewThunk } from "../../store/reviews";
+import { deleteReviewThunk, readReviewThunk } from "../../store/reviews";
 
 
 const Review = () => {
@@ -13,7 +13,8 @@ const Review = () => {
 
   // useSelectors
   const reviews = useSelector((state) => Object.values(state.reviews));
-  const logedInUser = useSelector(state => state.session.user);
+  const reviewsObj = useSelector((state) => state.reviews)
+  const loggedInUser = useSelector(state => state.session.user);
 
   const history = useHistory();
   const dispatch = useDispatch();
@@ -25,18 +26,35 @@ const Review = () => {
     }
   }
 
+  const editReviewEventHandler = async(id) => {
+    history.push(`/${boutiqueId}/reviews/${id}/edit`)
+  }
+
+  useEffect(() => {
+    dispatch(readReviewThunk(boutiqueId))
+
+  }, [boutiqueId])
+
+  if (!reviews) {
+    return null;
+  }
     return (
         <div>
           <h2 className="review-label">Reviews</h2>
           {reviews.map((review) => (
+            <div className="reviews-container">
             <div className="one-review">{review.content}
-            {/* {review?.userId === logedInUser?.id ? <button className="delete-review-button" onClick={() => deleteComment(review.id)}>Delete Review</button> : null} */}
-            <div className="delete-button-container">
-            {review?.userId === logedInUser?.id ? <button className="delete-review-button" onClick={() => deleteReviewEventHandler(review.id)}>Delete Review</button> : null}
+            <div className="delete-review-button-container">
+            {review?.userId === loggedInUser?.id ? <button className="delete-review-button" onClick={() => deleteReviewEventHandler(review.id)}>Delete Review</button> : null}
+            </div>
+            <div className="edit-review-button-container">
+            {review?.userId === loggedInUser?.id ? <button className="edit-review-button" onClick={() => editReviewEventHandler(review.id)}>Edit Review</button> : null}
+            </div>
             </div>
             </div>
           ))}
         </div>
+        
       );
 
 }

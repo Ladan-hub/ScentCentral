@@ -23,7 +23,6 @@ router.get(
 );
 
 
-
 // GET user's boutiques (READ)
 router.get(
   "/owned",
