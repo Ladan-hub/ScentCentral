@@ -12,6 +12,8 @@ const EditReview = () => {
 
     const {reviewId} = useParams();
     const {boutiqueId} = useParams();
+    // console.log("THIS IS THE REVIEW ID",reviewId)
+    // console.log("this is the boutique id", boutiqueId)
 
 
     const review = useSelector((state) => state.reviews[reviewId]);
@@ -31,15 +33,16 @@ const EditReview = () => {
     }, [content])
 
 
+    // Dispatching UPDATE REVIEW 
     const editedReviewSubmitted = (e) => {
         e.preventDefault();
         const editedReview = {
+            id: reviewId,
             content,
             userId: loggedInUser.id,
-            boutiqueId: boutiqueId
+            boutiqueId: boutiqueId,
         }
-        console.log("THIS IS THE EDITED REVIEW", editedReview)
-        const newReview = dispatch(updateReviewThunk(editedReview));
+        const newReview = dispatch(updateReviewThunk(editedReview, reviewId));
         if (newReview) {
             history.push(`/boutiques/${boutiqueId}`)
         }

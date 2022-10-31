@@ -34,10 +34,10 @@ export const deleteReviewAction = (review) => {
 }
 
 // AC for updating a review (UPDATE)
-export const updateReviewAction = (review) => {
+export const updateReviewAction = (editedReview) => {
     return {
         type: UPDATE,
-        review
+        editedReview
     }
 }
 
@@ -82,11 +82,11 @@ export const deleteReviewThunk = (id) => async dispatch => {
 }
 
 // THUNK for updating a review (UPDATE)
-export const updateReviewThunk = (review) => async(dispatch) => {
-    const response = await csrfFetch(`/api/reviews/${review.id}`, {
+export const updateReviewThunk = (editedReview, reviewId) => async(dispatch) => {
+    const response = await csrfFetch(`/api/reviews/${reviewId}`, {
       method: 'PUT',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(review)
+      body: JSON.stringify(editedReview)
     })
     if (response.ok) {
       const review = await response.json();
@@ -114,7 +114,7 @@ const reviewReducer = (state = {}, action) => {
         }
         case UPDATE: {
             const newState = {...state};
-            newState[action.reviewe.id] = action.review;
+            newState[action.editedReview.id] = action.editedReview;
         }
         default:
             return state;

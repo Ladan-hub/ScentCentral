@@ -20,7 +20,6 @@ router.post('/:id', requireAuth, asyncHandler(async (req,res) => {
 
 // GET all reviews (READ)
 router.get('/:id', requireAuth, asyncHandler(async (req,res) => {
-  console.log("THIS IS REQ.PARAMS", req.params)
   const reviews = await db.Review.findAll({
       where:{
           boutiqueId: req.params.id
@@ -44,8 +43,6 @@ return res.json(reviewToBeDeleted);
 
 
 
-
-
 // PUT updating a review (UPDATE) /api/reviews/:id
 router.put("/:id", requireAuth, asyncHandler(async (req,res) => {
   const oldReview = await db.Review.findOne({
@@ -54,6 +51,7 @@ router.put("/:id", requireAuth, asyncHandler(async (req,res) => {
       }
   })
   const newReview = oldReview.update(req.body);
+
   return res.json(newReview)
 }))
 

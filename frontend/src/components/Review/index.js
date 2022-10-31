@@ -30,6 +30,7 @@ const Review = () => {
     history.push(`/${boutiqueId}/reviews/${id}/edit`)
   }
 
+  // READ dispatch
   useEffect(() => {
     dispatch(readReviewThunk(boutiqueId))
 
