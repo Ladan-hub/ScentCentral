@@ -51,18 +51,26 @@ const EditReview = () => {
 
 
     return loggedInUser && (
-        <div className="review-div">
-            <ul className="error-messages">
+        <main className="form-root">
+        <div className="review-form-container">
+            <ul className="error-messages-ul">
                 {validationErrors.map((validationError) => (
-                    <li key={validationError}>{validationError}</li>
+                    <li className="error-messages-li" key={validationError}>{validationError}</li>
                 ))}
             </ul>
             <form className="review-form" onSubmit={editedReviewSubmitted}>
+                <main className="fields-container">
+                    <div className="add-review-textarea">
                 <textarea className="review-field" name="content" onChange={(e) => setContent(e.target.value)} value={content}>
                 </textarea>
-                <button className="review-submit-button" type="submit">Submit</button>
+                </div>
+                <div className="add-review-button-container">
+                <button disabled={validationErrors.length > 0} className="add-review-button" type="submit">Submit</button>
+                </div>
+                </main>
             </form>
         </div>
+        </main>
     )
 
 }

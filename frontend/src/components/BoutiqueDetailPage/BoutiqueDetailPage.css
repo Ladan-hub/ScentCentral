@@ -1,0 +1,87 @@
+.boutique-name-container{
+    margin-left: 20px;
+}
+
+.boutique-name{
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.boutique-priceRange-country-city-container{
+   
+    margin-top: 7px;
+    margin-left: 20px;
+}
+
+.boutique-detail-country-city{
+    font-family: sans-serif;
+    text-decoration:underline;
+    margin-bottom: 5px;
+}
+
+.boutique-image-container{
+    
+    margin-left: 20px; 
+    margin-top: 20px;
+}
+
+.single-boutique-image{
+    border-radius: 10px;
+    height: 400px;
+    width: 500px;
+}
+
+.boutique-address-container{
+    
+    margin-left: 20px;
+    margin-top: 7px;
+    font-weight: 700;
+}
+
+.review-button-container{
+    
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.review-button{
+    border: none;
+    color: white;
+    background-image: linear-gradient(to right, rgb(233,28,72), rgb(236,38,208));
+    height: 30px;
+    border-radius: 5px;
+}
+
+.all-reviews{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: sans-serif;
+}
+
+.buttons-container{
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+.delete-boutique-button-container{
+
+    margin-right: 10px;
+}
+
+.delete-boutique-button{
+    border: none;
+    color: white;
+    background-image: linear-gradient(to right, rgb(233,28,72), rgb(236,38,208));
+    height: 30px;
+    border-radius: 5px;
+}
+
+.edit-boutique-button{
+    border: none;
+    color: white;
+    background-image: linear-gradient(to right, rgb(233,28,72), rgb(236,38,208));
+    height: 30px;
+    border-radius: 5px;
+}
+
+

@@ -33,13 +33,17 @@ const Boutiques = () => {
                             </div>
                             <div className="boutique-info-container">
                            <div>
-                            {boutique.name}
+                            <h4 className="boutique-name">{boutique.name}</h4>
+                            </div>
+                        
+                            
+                           <div>
+                            <h4 className="boutique-country-city" >{boutique.country}, {boutique.city}</h4>
                             </div>
                             <div>
-                            {boutique.country}, {boutique.city}
-                            </div>
-                            <div>
+                            <h4 className="boutique-price-range">
                             {boutique.priceRange}
+                            </h4>
                             </div>
                         
                         </div>

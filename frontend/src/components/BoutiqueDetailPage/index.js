@@ -59,10 +59,10 @@ const BoutiqueDetail = () => {
           <h1 className="boutique-name">{boutique.name}</h1>
         </div>
         <div className="boutique-priceRange-country-city-container">
-          <div className="boutique-priceRange">{boutique.priceRange}</div>
-          <div className="boutique-country-city">
+        <div className="boutique-detail-country-city">
             {boutique.country}, {boutique.city}
           </div>
+          <div className="boutique-priceRange">{boutique.priceRange}</div>
         </div>
         <div className="boutique-image-container">
           <img
@@ -95,7 +95,7 @@ const BoutiqueDetail = () => {
               </button>
             ) : null}
           </span>
-          <span className="review-button-container">
+          <div className="review-button-container">
             {/* {reviews.map((review) => {if (review.userId){
               (
                 <div>
@@ -109,16 +109,14 @@ const BoutiqueDetail = () => {
                 Leave a Review
               </button>
             ) : null}
-          </span>
+          </div>
         </section>
         <section className="all-reviews">
-          
-            <section>
+          { loggedInUser && boutique?.userId !== loggedInUser?.id && reviews.length === 0 ? (<div className="write-first-review">Be the first one to write a review for {boutique.name}!</div>) : <section>
               <div>
                 <Review  />
               </div>
-            </section>
-          
+            </section> }
         </section>
       </>
     );

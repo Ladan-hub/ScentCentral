@@ -1,0 +1,33 @@
+.profile-button{
+    background-color: white;
+    padding: 15px 20px;
+    /* text-align: center; */
+    cursor: pointer;
+    border: solid lightgray;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.profile-dropdown-container{
+    background-color: white;
+    border-radius: 2px;
+    top: 100px;
+    left: 143px;
+    margin-top: 5px;
+    margin-right: 20px;
+    
+}
+
+
+.logout-button-li{
+    list-style: none;
+}
+
+.logout-button{
+    border: none;
+    color: white;
+    background-image: linear-gradient(to right, rgb(255, 90, 95), rgb(250,90,255));
+    height: 30px;
+    border-radius: 5px;
+}

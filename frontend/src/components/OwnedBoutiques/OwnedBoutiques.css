@@ -1,0 +1,58 @@
+
+.owned-boutiques-container{
+    margin: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.welcome-message{
+    margin-left: 20px;
+    font-family: sans-serif;
+    color: white;
+}
+
+
+.add-new-boutique-navlink{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: larger;
+}
+
+.add-new-boutique-text{
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+.one-boutique-container{
+    padding: 50px;
+}
+
+.title-and-create-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FF5A5F;
+    padding: 10px;
+    margin: auto;
+    margin-top: 0px;
+ 
+}
+
+.add-new-boutique-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FF5A5F;
+    padding-bottom: 20px;
+
+}

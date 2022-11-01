@@ -17,39 +17,41 @@ const OwnedBoutiques = () => {
 
   // UseSelectors
   const boutiques = useSelector((state) => Object.values(state.boutiques));
+  const loggedInUser = useSelector((state) => state.session.user);
 
   const history = useHistory()
 
   return (
-    <main className="owner-root-container">
+   <>
       <section className="title-and-create-button-container">
-        <h1>Welcome!</h1>
-      </section>
-      <div>
-        <NavLink to="/new">
-          <div>Add a New Boutique</div>
+        <h1 className="welcome-message">Welcome to your boutiques</h1>
+        </section>
+      <div className="add-new-boutique-container">
+        <NavLink className="add-new-boutique-navlink" to="/new">
+          <div className="add-new-boutique-text">Add a New Boutique!</div>
         </NavLink>
       </div>
-      <section className="owned-boutiques-container">
+      
+      <main className="owned-boutiques-container">
         {boutiques.map((boutique) => (
-          <span className="one-boutique-container" key={boutique.id}>
-            <span className="one-boutique">
+          <main className="one-boutique-container" key={boutique.id}>
+            <div className="one-boutique">
               <img
                 onClick={() => history.push(`/boutiques/${boutique.id}`)}
                 className="boutique-image"
                 src={boutique.imageUrl}
                 alt="boutique preview"
               />
+              </div>
               <div className="boutique-name">{boutique.name}</div>
               <div className="boutique-country-city">
                 {boutique.country}, {boutique.city}
               </div>
               <div className="boutique-price-range">{boutique.priceRange}</div>
-            </span>
-          </span>
+          </main>
         ))}
-      </section>
-    </main>
+   </main>
+</>
   );
 };
 

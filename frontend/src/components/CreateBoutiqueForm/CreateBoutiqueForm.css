@@ -1,0 +1,56 @@
+.form-root{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.boutique-form-container{
+    border: solid black;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 400px;
+
+}
+
+.fields-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add-boutique-form-label{
+    margin-left: 115px;
+}
+
+.add-boutique-button-container{
+    margin-left: 140px;
+
+}
+
+.add-boutique-field{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+.add-boutique{
+    font-family: sans-serif;
+    font-size: larger;
+}
+
+.add-boutique-button{
+    border: none;
+    color: white;
+    background-image: linear-gradient(to right, rgb(255, 90, 95), rgb(250,90,255));
+    height: 30px;
+    border-radius: 5px;
+}
+
+.add-boutique-form-errors-li{
+    list-style: none;
+    color: #FF5A5F;
+    font-weight: lighter;
+    padding: 5px;
+}
+

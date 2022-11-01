@@ -51,7 +51,7 @@ function Navigation({ isLoaded }){
     {sessionUser ? <ProfileButton className="profile-button" user={sessionUser} /> : 
     <div>
         <LoginFormModal className="login-button" />
-        <NavLink className="sign-up-button" to="/signup">Sign Up</NavLink>
+        <NavLink className="sign-up-navlink" to="/signup">Sign Up</NavLink>
       </div> }
     </li>
     </ul>

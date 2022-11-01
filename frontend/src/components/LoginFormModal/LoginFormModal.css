@@ -1,0 +1,11 @@
+.log-in-button-on-navbar{
+    border: none;
+    color: white;
+    background-color: #FF5A5F;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    font-family: sans-serif;
+}

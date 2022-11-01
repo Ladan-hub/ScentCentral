@@ -48,6 +48,7 @@ const Review = () => {
         <div key={review.id} className="reviews-container">
           <div className="one-review">
             {review.content}
+            <div className="buttons-container">
             <div className="delete-review-button-container">
               {review?.userId === loggedInUser?.id ? (
                 <button
@@ -67,6 +68,7 @@ const Review = () => {
                   Edit Review
                 </button>
               ) : null}
+            </div>
             </div>
           </div>
         </div>
