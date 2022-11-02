@@ -22,7 +22,7 @@ const Boutiques = () => {
     const history = useHistory()
 
     return (
-        
+        <>
             <main className="all-boutiques-container">
                 {boutiques.map((boutique) => (
                     <main className="boutiques-container">
@@ -50,7 +50,13 @@ const Boutiques = () => {
                     </main>
                 ))}
 
+             
             </main>
+            <footer className="footer">
+            <a className="footer-github-link" rel="noreferrer" href="https://github.com/Ladan-hub/ScentCentral">Github</a>
+            <a className="footer-linkedIn" rel="noreferrer" href="https://linkedin.com/in/ladan-nazari">LinkedIn</a>
+         </footer>
+         </>
 
 
     )

@@ -29,6 +29,9 @@ const ReviewForm = () => {
     if (content.length < 3) {
       errors.push("Review must be at least 3 chatracters");
     }
+    if (content.length > 255) {
+      errors.push("Rview must be less than 256 characters")
+    }
     setValidationErrors(errors);
   }, [content]);
 

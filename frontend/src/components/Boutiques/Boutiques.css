@@ -47,6 +47,28 @@ body {
 
 }
 
+.footer{
+    background-color: #FF5A5F;
+    padding: 20px;
+}
+
+.footer-github-link{
+    text-decoration: none;
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.footer-linkedIn{
+    text-decoration: none;
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 20px;
+}
+
 
 
 
