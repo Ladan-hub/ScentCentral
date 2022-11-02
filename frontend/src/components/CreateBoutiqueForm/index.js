@@ -30,7 +30,7 @@ const CreateBoutiqueForm = () => {
       errors.push("Name must be less than 251 characters");
     }
     if (country.length < 4) {
-      errors.push("Country must be at least 4 characters");
+      errors.push("Country must be at least 2 characters");
     }
     if (country.length > 56) {
       errors.push("Country must be less than 57 characters");

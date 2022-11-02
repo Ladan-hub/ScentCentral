@@ -22,7 +22,7 @@ const boutiqueValidations = [
   .isLength({max: 56})
   .withMessage("Country must be less than 57 characters")
   .isLength({min:4})
-  .withMessage("Country must be at least 4 characters"),
+  .withMessage("Country must be at least 2 characters"),
   check('city')
   .exists({checkFalsy: true})
   .withMessage("Please provide a city")
