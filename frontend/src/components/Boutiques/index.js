@@ -29,7 +29,7 @@ const Boutiques = () => {
                     <div className="boutique-image-container" key={boutique.id} >
         
                            
-                            <img onClick={() => history.push(`/boutiques/${boutique.id}`)} className="boutique-image" src={boutique.imageUrl} alt="boutique preview" />
+                            <img onClick={() => history.push(`/boutiques/${boutique.id}`)} className="boutique-image" src={boutique.imageUrl} alt="boutique preview" onError={event => {event.target.src = "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg"}} />
                             </div>
                             <div className="boutique-info-container">
                            <div>

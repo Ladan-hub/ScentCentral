@@ -65,8 +65,8 @@ const CreateBoutiqueForm = () => {
     if (imageUrl.length > 500) {
       errors.push("Perfume image URL must be less than 500 characters");
     }
-    if ((!imageUrl.endsWith("jpg")) && (!imageUrl.endsWith("png")) && (!imageUrl.endsWith("gif"))) {
-      errors.push("Image URL must end with jpg, png, or gif");
+    if ((!imageUrl.endsWith(".jpg")) && (!imageUrl.endsWith(".png")) && (!imageUrl.endsWith(".gif"))) {
+      errors.push("Image URL must end with .jpg, .png, or .gif");
     }
     setValidationErrors(errors);
   }, [name, country, city, address, priceRange, imageUrl]);
@@ -99,6 +99,11 @@ const CreateBoutiqueForm = () => {
 
     history.push("/");
   };
+
+  const brokenLinkImage = () => {
+  
+
+  }
 
   return (
     loggedInUser && (
