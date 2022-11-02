@@ -42,10 +42,10 @@ const CreateBoutiqueForm = () => {
       errors.push("City must be less than 86 characters");
     }
     if (address.length < 9) {
-      errors.push("City must be at least 9 characters");
+      errors.push("Address must be at least 9 characters");
     }
     if (address.length > 85) {
-      errors.push("City must be less than 86 characters");
+      errors.push("Address must be less than 86 characters");
     }
     if (
       priceRange !== "$" &&
