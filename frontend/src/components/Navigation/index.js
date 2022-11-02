@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
+import logo from "../../context/apple-touch-icon.png";
 
 
 
@@ -34,7 +35,9 @@ function Navigation({ isLoaded }){
       
     <ul>
       <li className='li-elements-home'>
-        <NavLink className="home-button-logo" exact to="/">Home</NavLink>
+        <NavLink className="home-button-logo" exact to="/">
+          <img className='logo-img' id="logo" src={logo} />
+        </NavLink>
         {isLoaded && sessionLinks}
       </li>
     </ul>

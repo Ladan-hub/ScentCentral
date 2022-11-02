@@ -76,7 +76,7 @@
     border-radius: 5px;
 }
 
-.edit-boutique-button{
+.go-to-edit-boutique-button{
     border: none;
     color: white;
     background-image: linear-gradient(to right, rgb(233,28,72), rgb(236,38,208));

@@ -85,10 +85,10 @@ const BoutiqueDetail = () => {
               </button>
             ) : null}
           </span>
-          <span className="edit-boutique-button-container">
+          <span className="go-to-edit-boutique-button-container">
             {boutique?.userId === loggedInUser?.id ? (
               <button
-                className="edit-boutique-button"
+                className="go-to-edit-boutique-button"
                 onClick={editBoutiqueEventHandler}
               >
                 Edit Boutique
