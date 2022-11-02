@@ -12,10 +12,13 @@ const Review = () => {
   const { boutiqueId } = useParams();
 
   // useSelectors
+
+  const boutique = useSelector((state) => state.boutiques[boutiqueId]);
+
   const reviews = useSelector((state) => Object.values(state.reviews));
-  // console.log("REVIEWS ARRAY", reviews)
+
   const reviewsObj = useSelector((state) => state.reviews);
-  // console.log("REVIEWS OBJ", reviewsObj)
+
   const loggedInUser = useSelector((state) => state.session.user);
 
   const history = useHistory();
@@ -43,6 +46,7 @@ const Review = () => {
   }
   return (
     <div>
+      {loggedInUser?.id === boutique?.userId ? <div className="you-cant-leave-review"> You can't leave a review for your own boutique!</div> : null}
       <h2 className="review-label">Reviews</h2>
       {reviews.map((review) => (
         <div key={review.id} className="reviews-container">
