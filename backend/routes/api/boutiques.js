@@ -4,13 +4,53 @@ const db = require("../../db/models");
 const asyncHandler = require("express-async-handler");
 const { check } = require("express-validator");
 const { handleValidationErrors } = require("../../utils/validation");
-const {
-  setTokenCookie,
-  restoreUser,
-  requireAuth,
-} = require("../../utils/auth");
+const { setTokenCookie, restoreUser, requireAuth} = require("../../utils/auth");
 
-// Don't forget to write validations
+// Backend Validations
+
+const boutiqueValidations = [
+  check('name')
+  .exists({checkFalsy: true})
+  .withMessage("Please provide a name")
+  .isLength({max: 250})
+  .withMessage("Name must be less than 251 characters")
+  .isLength({min:2})
+  .withMessage("Name must be at least 2 characters"),
+  check('country')
+  .exists({checkFalsy: true})
+  .withMessage("Please provide a country")
+  .isLength({max: 56})
+  .withMessage("Country must be less than 57 characters")
+  .isLength({min:4})
+  .withMessage("Country must be at least 4 characters"),
+  check('city')
+  .exists({checkFalsy: true})
+  .withMessage("Please provide a city")
+  .isLength({max: 85})
+  .withMessage("City must be less than 86 characters")
+  .isLength({min:1})
+  .withMessage("City must be at least 1 character"),
+  check('address')
+  .exists({checkFalsy: true})
+  .withMessage("Please provide an address")
+  .isLength({max: 85})
+  .withMessage("Address must be less than 86 characters")
+  .isLength({min:9})
+  .withMessage("Address must be at least 9 character"),
+  check('priceRange')
+  .exists({checkFalsy: true})
+  .withMessage("Please provide a price range")
+  .isLength({max: 4})
+  .withMessage("Address must be less than 5 characters")
+  .isLength({min:1})
+  .withMessage("Address must be at least 1 character"),
+  check('imageUrl')
+  .exists({checkFalsy: true})
+  .withMessage('Please provide a boutique image URL')
+  .isLength({max: 500})
+  .withMessage('Perfume image URL must be less than 501 characters'),
+  handleValidationErrors
+]
 
 
 // GET all boutiques (READ)
@@ -59,6 +99,7 @@ router.delete(
 router.put(
   "/:id",
   requireAuth,
+  boutiqueValidations,
   asyncHandler(async (req, res) => {
     const oldBoutique = await db.Boutique.findOne({
       where: {
@@ -90,6 +131,7 @@ router.get(
 router.post(
   "/",
   requireAuth,
+  boutiqueValidations,
   asyncHandler(async (req, res) => {
     const boutiqueToCreate = req.body;
     const newlyCreatedBoutique = await db.Boutique.create(boutiqueToCreate);

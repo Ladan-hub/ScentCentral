@@ -27,25 +27,25 @@ const CreateBoutiqueForm = () => {
       errors.push("Name must be at least 2 characters");
     }
     if (name.length > 250) {
-      errors.push("Name must be less than 250 characters");
+      errors.push("Name must be less than 251 characters");
     }
     if (country.length < 4) {
       errors.push("Country must be at least 4 characters");
     }
     if (country.length > 56) {
-      errors.push("Country must be less than 56 characters");
+      errors.push("Country must be less than 57 characters");
     }
     if (city.length < 1) {
       errors.push("City must be at least one character");
     }
     if (city.length > 85) {
-      errors.push("City must be less than 85 characters");
+      errors.push("City must be less than 86 characters");
     }
     if (address.length < 9) {
       errors.push("City must be at least 9 characters");
     }
     if (address.length > 85) {
-      errors.push("City must be less than 85 characters");
+      errors.push("City must be less than 86 characters");
     }
     if (
       priceRange !== "$" &&
@@ -57,14 +57,14 @@ const CreateBoutiqueForm = () => {
       errors.push("Price Range must be $ up to $$$$");
     }
     if (imageUrl.length < 10) {
-      errors.push("Perfume image URL must be at least 10 characters");
+      errors.push("Boutique image URL must be at least 10 characters");
     }
     if (imageUrl.length > 500) {
-      errors.push("Perfume image URL must be less than 500 characters");
+      errors.push("Boutique image URL must be less than 501 characters");
     }
-    if (imageUrl.length > 500) {
-      errors.push("Perfume image URL must be less than 500 characters");
-    }
+    // if (imageUrl.length > 500) {
+    //   errors.push("Perfume image URL must be less than 500 characters");
+    // }
     if ((!imageUrl.endsWith(".jpg")) && (!imageUrl.endsWith(".png")) && (!imageUrl.endsWith(".gif"))) {
       errors.push("Image URL must end with .jpg, .png, or .gif");
     }
