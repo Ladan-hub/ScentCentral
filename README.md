@@ -6,6 +6,7 @@ As a logged in user, you can create, update and delete your review on each bouti
 Live Link to ScentCentral: https://scentcentral.herokuapp.com/
 
 # Splash Page View 
+<img width="1440" alt="Screen Shot 2022-11-03 at 1 08 43 AM" src="https://user-images.githubusercontent.com/77522504/199607544-47d4718e-4218-4358-819a-5c340026e133.png">
 
 
 # Boutique Detail Page View
