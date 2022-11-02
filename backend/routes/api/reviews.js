@@ -11,8 +11,17 @@ const {
 } = require("../../utils/auth");
 
 
+const reviewValidations = [
+  check('content')
+  .exists({checkFalsy: true})
+  .withMessage('Please provide a review')
+  .isLength({min:3})
+  .withMessage("Review must be at least 3 characters"),
+  handleValidationErrors
+]
+
 // POST creating a review (CREATE)
-router.post('/:id', requireAuth, asyncHandler(async (req,res) => {
+router.post('/:id', requireAuth,reviewValidations, asyncHandler(async (req,res) => {
   console.log("POST!!!!!!!!!!!")
     
   const review = await db.Review.create(req.body)
@@ -46,7 +55,7 @@ return res.json(reviewToBeDeleted);
 
 
 // PUT updating a review (UPDATE) /api/reviews/:id
-router.put("/:id", requireAuth, asyncHandler(async (req,res) => {
+router.put("/:id", requireAuth, reviewValidations, asyncHandler(async (req,res) => {
   // console.log("PUT!!!!!!!!!!!")
   const oldReview = await db.Review.findOne({
       where: {
