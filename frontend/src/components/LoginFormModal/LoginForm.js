@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import "./LoginForm.css"
+import { useHistory } from "react-router-dom";
 
 
 function LoginForm() {
@@ -19,6 +20,18 @@ function LoginForm() {
         if (data && data.errors) setErrors(data.errors);
       }
     );
+  };
+  const history = useHistory()
+  const demo = () => {
+   
+    return dispatch(
+      sessionActions.login({ credential: "FakeUser2", password: "password3" })
+    )
+      .then(() => history.push("/"))
+      .catch(async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      });
   };
 
   return (
@@ -58,6 +71,11 @@ function LoginForm() {
       </div>
       <div className="signup-button-container" >
       <button className="login-button" type="submit">Log In</button>
+      </div>
+      <div className="demo-container">
+      <button className="demo-button" onClick={() => demo()}>
+        Demo
+      </button>
       </div>
       </main>
     </form>
