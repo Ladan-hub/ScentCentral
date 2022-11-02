@@ -114,6 +114,7 @@ const EditBoutiqueForm = () => {
 
   return (
     loggedInUser && (
+      <main className="form-root">
       <div className="boutique-form-container">
         <h1 className="add-boutique">Edit Boutique</h1>
         <div className="error-message-container">
@@ -124,6 +125,7 @@ const EditBoutiqueForm = () => {
           </ul>
         </div>
         <form className="add-boutique-form" onSubmit={editBoutiqueSubmitted}>
+          <main className="fields-container">
           <label className="add-boutique-form-label">
             <input
               className="add-boutique-field"
@@ -184,6 +186,7 @@ const EditBoutiqueForm = () => {
               name="imageUrl"
             />
           </label>
+          <div className="edit-boutique-button-container">
           <button
             disabled={validationErrors.length > 0}
             className="add-boutique-button"
@@ -191,8 +194,11 @@ const EditBoutiqueForm = () => {
           >
             Submit Edit
           </button>
+          </div>
+          </main>
         </form>
       </div>
+      </main>
     )
   );
 };

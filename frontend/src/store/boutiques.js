@@ -170,6 +170,7 @@ const boutiqueReducer = (state = {}, action) => {
     case UPDATE: {
       const newState = {...state};
       newState[action.boutique.id] = action.boutique;
+      return newState;
     }
 
     case DELETE: {
