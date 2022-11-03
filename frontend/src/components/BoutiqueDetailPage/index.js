@@ -113,11 +113,11 @@ const BoutiqueDetail = () => {
           </div>
         </section>
         <section className="all-reviews">
-          { loggedInUser && boutique?.userId !== loggedInUser?.id && reviews.length === 0 ? (<div className="write-first-review">Be the first one to write a review for {boutique.name}!</div>) : <section>
+          <section>
               <div>
                 <Review  />
               </div>
-            </section> }
+            </section> 
         </section>
       </>
     );
