@@ -1,4 +1,4 @@
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { updateBoutiqueThunk } from "../../store/boutiques";
@@ -76,6 +76,9 @@ const EditBoutiqueForm = () => {
     ) {
       errors.push("Image URL must end with jpg, png, or gif");
     }
+    if((!imageUrl.startsWith("http://")) && (!imageUrl.startsWith("https://"))) {
+      errors.push("Image URL must start with http:// or https://")
+    }
     setValidationErrors(errors);
   }, [name, country, city, address, priceRange, imageUrl]);
 
@@ -120,7 +123,7 @@ const EditBoutiqueForm = () => {
         <div className="error-message-container">
           <ul className="add-boutique-form-errors">
             {validationErrors.map((validationError) => (
-              <li key={validationError}>{validationError}</li>
+              <li className="add-boutique-form-errors-li" key={validationError}>{validationError}</li>
             ))}
           </ul>
         </div>

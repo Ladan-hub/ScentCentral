@@ -68,6 +68,9 @@ const CreateBoutiqueForm = () => {
     if ((!imageUrl.endsWith(".jpg")) && (!imageUrl.endsWith(".png")) && (!imageUrl.endsWith(".gif"))) {
       errors.push("Image URL must end with .jpg, .png, or .gif");
     }
+    if((!imageUrl.startsWith("http://")) && (!imageUrl.startsWith("https://"))) {
+      errors.push("Image URL must start with http:// or https://")
+    }
     setValidationErrors(errors);
   }, [name, country, city, address, priceRange, imageUrl]);
 
