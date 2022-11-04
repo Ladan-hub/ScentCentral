@@ -33,7 +33,7 @@ const EditBoutiqueForm = () => {
     if (name.length > 250) {
       errors.push("Name must be less than 250 characters");
     }
-    if (country.length < 4) {
+    if (country.length < 2) {
       errors.push("Country must be at least 4 characters");
     }
     if (country.length > 56) {
