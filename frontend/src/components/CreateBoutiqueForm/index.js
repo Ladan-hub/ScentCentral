@@ -100,10 +100,10 @@ const CreateBoutiqueForm = () => {
     history.push("/");
   };
 
-  const brokenLinkImage = () => {
+  // const brokenLinkImage = () => {
   
 
-  }
+  // }
 
   return (
     loggedInUser && (
