@@ -69,6 +69,19 @@ body {
     margin-left: 20px;
 }
 
+.share-your-boutiques-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.share-your-boutiques-text{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #FF5A5F;
+}
+
 
 
 

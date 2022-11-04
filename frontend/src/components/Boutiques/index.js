@@ -23,9 +23,14 @@ const Boutiques = () => {
 
     return (
         <>
+        <div className="share-your-boutiques-container">
+        <h1 className="share-your-boutiques-text">Share your boutique with the world!</h1>
+        </div>
             <main className="all-boutiques-container">
+                
                 {boutiques.map((boutique) => (
                     <main className="boutiques-container">
+                        
                     <div className="boutique-image-container" key={boutique.id} >
         
                            
