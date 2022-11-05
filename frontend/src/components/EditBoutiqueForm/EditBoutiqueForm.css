@@ -1,3 +1,16 @@
 .edit-boutique-button-container{
     margin-left: 155px;
 }
+
+
+.edit-boutique-label-container{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.edit-boutique{
+font-weight: bold;
+font-family: sans-serif;
+font-size: large;
+}

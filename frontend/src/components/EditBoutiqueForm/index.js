@@ -119,7 +119,9 @@ const EditBoutiqueForm = () => {
     loggedInUser && (
       <main className="form-root">
       <div className="boutique-form-container">
-        <h1 className="add-boutique">Edit Boutique</h1>
+        <div className="edit-boutique-label-container">
+        <h1 className="edit-boutique">Edit Boutique</h1>
+        </div>
         <div className="error-message-container">
           <ul className="add-boutique-form-errors">
             {validationErrors.map((validationError) => (

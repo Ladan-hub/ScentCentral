@@ -29,16 +29,17 @@ function SignupFormPage() {
   };
 
   return (
-    <main className="form-root">
+    <main className="login-form-root">
       <div className="form-container">
     <form className="form" onSubmit={handleSubmit}>
-      <main className="fields-container">
+      
       <div className="error-message-container">
       <ul>
-        {errors.map((error, idx) => <li key={idx}>{error}</li>)}
+        {errors.map((error, idx) => <li className="error-message" key={idx}>{error}</li>)}
       </ul>
       </div>
-      <div className="label">
+      <main className="login-fields-container">
+      <div className="fields-label">
       <label>
         <input className="input"
         placeholder="Email"
@@ -49,7 +50,7 @@ function SignupFormPage() {
         />
       </label>
       </div>
-      <div className="label">
+      <div className="fields-label">
       <label>
         <input className="input"
         placeholder="User Name"
@@ -60,7 +61,7 @@ function SignupFormPage() {
         />
       </label>
       </div>
-      <div className="label">
+      <div className="fields-label">
       <label>
 
         <input className="input"
@@ -72,7 +73,7 @@ function SignupFormPage() {
         />
       </label>
       </div>
-      <div className="label">
+      <div className="fields-label">
       <label>
         
         <input className="input"

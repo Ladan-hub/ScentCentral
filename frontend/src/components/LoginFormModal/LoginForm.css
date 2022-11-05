@@ -8,6 +8,13 @@
     padding-right: 20px;
 }
 
+.demo-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2px;
+}
+
 .demo-button{
     border: none;
     color: white;
@@ -18,24 +25,36 @@
     padding-right: 20px;
 }
 
-.demo-container{
+
+.login-form-root{
+    padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 2px;
 }
 
-.form-root{
-    padding: 20px;
+.login-fields-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.label{
+.fields-label{
     padding: 7px;
     margin-bottom: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .input{
     border: solid black;
     border-radius: 10px;
     padding: 7px;
+}
+
+.error-message{
+    color: #FF5A5F;
+    list-style: none;
+    padding-right: 40px;
 }
