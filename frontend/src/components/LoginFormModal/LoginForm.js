@@ -35,18 +35,19 @@ function LoginForm() {
   };
 
   return (
-    <main className="form-root">
+    <main className="login-form-root">
       <div className="form-container-login">
     <form onSubmit={handleSubmit}>
-    <main className="fields-container">
+    
     <div className="error-message-container">
       <ul>
         {errors.map((error, idx) => (
-          <li key={idx}>{error}</li>
+          <li className="error-message" key={idx}>{error}</li>
         ))}
       </ul>
       </div>
-      <div className="label">
+      <main className="login-fields-container">
+      <div className="fields-label">
       <label>
         <input className="input"
         placeholder="Username or Email"
@@ -57,7 +58,7 @@ function LoginForm() {
         />
       </label>
       </div>
-      <div className="label">
+      <div className="fields-label">
       <label>
         
         <input className="input"
@@ -69,6 +70,7 @@ function LoginForm() {
         />
       </label>
       </div>
+      </main>
       <div className="signup-button-container" >
       <button className="login-button" type="submit">Log In</button>
       </div>
@@ -77,7 +79,7 @@ function LoginForm() {
         Demo
       </button>
       </div>
-      </main>
+      
     </form>
     </div>
     </main>
