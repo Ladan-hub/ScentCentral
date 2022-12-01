@@ -14,13 +14,13 @@ body {
 
 .boutiques-container{
 
-    padding: 30px;
+    padding: 3px;
     
 }
 
 .boutique-image {
-    width: 270px;
-    height: 270px;
+    width: 310px;
+    height: 290px;
 
     border-radius: 10px;
 }
