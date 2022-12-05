@@ -12,15 +12,19 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
+      stars: {
+        allowNull: false,
+        type: Sequelize.INTEGER
+      },
       userId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: {model: 'Users'}
+        refereces: {model: 'Users'}
       },
       boutiqueId: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: {model: 'Boutiques'}
+        refereces: {model: 'Boutiques'}
       },
       createdAt: {
         allowNull: false,

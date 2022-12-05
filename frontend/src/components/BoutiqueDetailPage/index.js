@@ -69,7 +69,7 @@ const BoutiqueDetail = () => {
             className="single-boutique-image"
             src={boutique.imageUrl}
             alt="boutique preview"
-            onError={event => {event.target.src = "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg"}}
+            onError={event => {event.target.src = "https://ionicframework.com/docs/img/demos/thumbnail.svg"}}
           />
         </div>
         <div className="boutique-address-container">
