@@ -22,7 +22,6 @@ const reviewValidations = [
 
 // POST creating a review (CREATE)
 router.post('/:id', requireAuth,reviewValidations, asyncHandler(async (req,res) => {
-  console.log("POST!!!!!!!!!!!")
     
   const review = await db.Review.create(req.body)
   return res.json(review)
@@ -32,10 +31,7 @@ router.post('/:id', requireAuth,reviewValidations, asyncHandler(async (req,res) 
 router.get('/:id', requireAuth, asyncHandler(async (req,res) => {
   console.log("GET!!!!!!!!!!!")
   const reviews = await db.Review.findAll({
-      where:{
-          boutiqueId: req.params.id
-         
-      }
+      where:{ boutiqueId: req.params.id }
   })
   return res.json(reviews)
 }));

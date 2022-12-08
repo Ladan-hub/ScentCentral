@@ -10,6 +10,7 @@ import Review from "../Review";
 import "./BoutiqueDetailPage.css";
 
 
+
 const BoutiqueDetail = () => {
 
   // const [editReview, setEditReview] = useState({});
@@ -24,7 +25,6 @@ const BoutiqueDetail = () => {
   const reviewsObj = useSelector((state) => state.reviews);
   console.log("THIS IS REVIEWS OBJ", reviewsObj)
 
-  // console.log(boutique);
 
   // Thunk Action Dispatch for reading the boutique detail
   const dispatch = useDispatch();
@@ -60,7 +60,7 @@ const BoutiqueDetail = () => {
         </div>
         <div className="boutique-priceRange-country-city-container">
         <div className="boutique-detail-country-city">
-            {boutique.country}, {boutique.city}
+        {reviews.length} reviews . {boutique.country}, {boutique.city}
           </div>
           <div className="boutique-priceRange">{boutique.priceRange}</div>
         </div>
