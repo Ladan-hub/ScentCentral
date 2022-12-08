@@ -10,6 +10,7 @@ import Review from "../Review";
 import "./BoutiqueDetailPage.css";
 
 
+
 const BoutiqueDetail = () => {
 
   // const [editReview, setEditReview] = useState({});
@@ -24,7 +25,6 @@ const BoutiqueDetail = () => {
   const reviewsObj = useSelector((state) => state.reviews);
   console.log("THIS IS REVIEWS OBJ", reviewsObj)
 
-  // console.log(boutique);
 
   // Thunk Action Dispatch for reading the boutique detail
   const dispatch = useDispatch();
@@ -60,7 +60,7 @@ const BoutiqueDetail = () => {
         </div>
         <div className="boutique-priceRange-country-city-container">
         <div className="boutique-detail-country-city">
-            {boutique.country}, {boutique.city}
+        {reviews.length} reviews . {boutique.country}, {boutique.city}
           </div>
           <div className="boutique-priceRange">{boutique.priceRange}</div>
         </div>
@@ -69,7 +69,7 @@ const BoutiqueDetail = () => {
             className="single-boutique-image"
             src={boutique.imageUrl}
             alt="boutique preview"
-            onError={event => {event.target.src = "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg"}}
+            onError={event => {event.target.src = "https://ionicframework.com/docs/img/demos/thumbnail.svg"}}
           />
         </div>
         <div className="boutique-address-container">

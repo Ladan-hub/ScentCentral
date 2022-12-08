@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./Review.css";
 import { deleteReviewThunk, readReviewThunk } from "../../store/reviews";
+import stars from "./star.PNG"
 
 const Review = () => {
   
@@ -16,8 +17,10 @@ const Review = () => {
   const boutique = useSelector((state) => state.boutiques[boutiqueId]);
 
   const reviews = useSelector((state) => Object.values(state.reviews));
+  console.log("THIS IS THE REVIEWS ARRAY!!!!", reviews)
 
   const reviewsObj = useSelector((state) => state.reviews);
+  console.log("THIS IS THE REVIEWS OBJECT", reviewsObj)
 
   const loggedInUser = useSelector((state) => state.session.user);
 
@@ -44,12 +47,25 @@ const Review = () => {
   if (!reviews) {
     return null;
   }
+
+
   return (
     <div>
       {loggedInUser?.id === boutique?.userId ? <div className="you-cant-leave-review"> You can't leave a review for your own boutique!</div> : null}
       <h2 className="review-label">Reviews</h2>
       {reviews.map((review) => (
         <div key={review.id} className="reviews-container">
+        
+          <div className="reviewer-username-container">
+            {loggedInUser?.id === review.userId && <div className="reviewer-username">{loggedInUser.username}</div>}
+            {/* {loggedInUser?.id !== review.userId && <div>{review.userId}</div>} */}
+          </div>
+          <spam className="stars-image-container">
+            <img className="star-img" style={{width:"15px"}} src={stars}></img>
+          </spam>
+          <spam className="stars-number">
+          {review.stars}
+          </spam>
           <div className="one-review">
             {review.content}
             <div className="buttons-container">
