@@ -6,7 +6,7 @@ import {
   readBoutiqueDetailThunk,
 } from "../../store/boutiques";
 import Review from "../Review";
-
+import Perfume from "../Perfume";
 import "./BoutiqueDetailPage.css";
 
 
@@ -111,6 +111,14 @@ const BoutiqueDetail = () => {
               </button>
             ) : null}
           </div>
+        </section>
+        <section className="all-perfumes">
+          <section>
+            <div>
+              <Perfume /> 
+            </div>
+          </section>
+
         </section>
         <section className="all-reviews">
           <section>

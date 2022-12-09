@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+}
+
+.all-perfumes-container{
+    margin: 3%;
+    display: flex;
+   
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.perfumes-container {
+    padding: 3px;
+}
+
+.perfume-img{
+    width: 310px;
+    height: 290px;
+
+    border-radius: 10px;
+}

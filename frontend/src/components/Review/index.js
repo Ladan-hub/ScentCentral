@@ -17,10 +17,10 @@ const Review = () => {
   const boutique = useSelector((state) => state.boutiques[boutiqueId]);
 
   const reviews = useSelector((state) => Object.values(state.reviews));
-  console.log("THIS IS THE REVIEWS ARRAY!!!!", reviews)
+  // console.log("THIS IS THE REVIEWS ARRAY!!!!", reviews)
 
   const reviewsObj = useSelector((state) => state.reviews);
-  console.log("THIS IS THE REVIEWS OBJECT", reviewsObj)
+  // console.log("THIS IS THE REVIEWS OBJECT", reviewsObj)
 
   const loggedInUser = useSelector((state) => state.session.user);
 

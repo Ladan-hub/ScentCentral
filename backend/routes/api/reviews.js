@@ -10,7 +10,7 @@ const {
   requireAuth,
 } = require("../../utils/auth");
 
-
+// Backend Validations 
 const reviewValidations = [
   check('content')
   .exists({checkFalsy: true})
@@ -29,7 +29,7 @@ router.post('/:id', requireAuth,reviewValidations, asyncHandler(async (req,res) 
 
 // GET all reviews (READ)
 router.get('/:id', requireAuth, asyncHandler(async (req,res) => {
-  console.log("GET!!!!!!!!!!!")
+  // console.log("GET!!!!!!!!!!!")
   const reviews = await db.Review.findAll({
       where:{ boutiqueId: req.params.id }
   })
