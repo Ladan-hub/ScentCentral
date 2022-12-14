@@ -47,19 +47,12 @@ const Review = () => {
   if (!reviews) {
     return null;
   }
-
-
   return (
     <div>
       {loggedInUser?.id === boutique?.userId ? <div className="you-cant-leave-review"> You can't leave a review for your own boutique!</div> : null}
       <h2 className="review-label">Reviews</h2>
       {reviews.map((review) => (
         <div key={review.id} className="reviews-container">
-        
-          <div className="reviewer-username-container">
-            {loggedInUser?.id === review.userId && <div className="reviewer-username">{loggedInUser.username}</div>}
-            {/* {loggedInUser?.id !== review.userId && <div>{review.userId}</div>} */}
-          </div>
           <spam className="stars-image-container">
             <img className="star-img" style={{width:"15px"}} src={stars}></img>
           </spam>

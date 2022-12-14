@@ -11,6 +11,10 @@ import CreateBoutiqueForm from "./components/CreateBoutiqueForm";
 import EditBoutiqueForm from "./components/EditBoutiqueForm";
 import ReviewForm from "./components/LeaveReviewForm";
 import EditReview from "./components/EditReviewForm";
+import CreatePerfumeForm from "./components/CreatePerfumeForm";
+import EditPerfumeForm from "./components/EditPerfumeForm";
+import OwnedBookings from "./components/OwnedBookings";
+import CreateBookingForm from "./components/CreateBookingForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,6 +31,9 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+          <Route exact path="/bookings">
+            <OwnedBookings />
+          </Route>
           <Route exact path="/boutiques/owned">
             <OwnedBoutiques />
           </Route>
@@ -39,14 +46,20 @@ function App() {
           <Route exact path="/boutiques/:boutiqueId/review">
             <ReviewForm />
           </Route>
+          <Route exact path="/boutiques/:boutiqueId/perfume">
+            <CreatePerfumeForm />
+          </Route>
+          <Route exact path="/boutiques/:boutiqueId/booking">
+            <CreateBookingForm />
+          </Route>
+          <Route exact path="/:boutiqueId/perfume/:perfumeId/edit">
+            <EditPerfumeForm /> 
+          </Route>
           <Route path="/:boutiqueId/reviews/:reviewId/edit">
-            <EditReview /> 
+            <EditReview />
           </Route>
           <Route exact path="/">
             <Boutiques />
-          </Route>
-          <Route path="/new">
-            <CreateBoutiqueForm />
           </Route>
         </Switch>
       )}

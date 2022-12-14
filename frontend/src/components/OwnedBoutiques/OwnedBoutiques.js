@@ -23,12 +23,12 @@ const OwnedBoutiques = () => {
 
   return (
    <>
-      <section className="title-and-create-button-container">
-        <h1 className="welcome-message">Welcome to your boutiques</h1>
+      <section className="title">
+        <h1 className="welcome-message">Welcome to your Boutiques!</h1>
         </section>
       <div className="add-new-boutique-container">
         <NavLink className="add-new-boutique-navlink" to="/new">
-          <div className="add-new-boutique-text">Add a New Boutique!</div>
+          <div className="add-new-boutique-text">Add a New Boutique</div>
         </NavLink>
       </div>
       

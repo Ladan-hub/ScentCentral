@@ -45,7 +45,7 @@ function Navigation({ isLoaded }){
     <section className='become-a-host-and-profile-button'>
     <ul className='ul-elements-become-a-host'>
       <li className='li-element-become-a-host'>
-      {loggedInUser ? <NavLink  className="NavLink-add-boutique" to="/boutiques/owned">Become a host</NavLink> : null}
+      {loggedInUser ? <NavLink  className="NavLink-add-boutique" to="/boutiques/owned">Become a Host</NavLink> : null}
       </li>
     </ul>
     

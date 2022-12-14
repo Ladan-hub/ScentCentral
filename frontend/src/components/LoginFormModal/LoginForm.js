@@ -25,7 +25,7 @@ function LoginForm() {
   const demo = () => {
    
     return dispatch(
-      sessionActions.login({ credential: "FakeUser2", password: "password3" })
+      sessionActions.login({ credential: "kilian", password: "password" })
     )
       .then(() => history.push("/"))
       .catch(async (res) => {

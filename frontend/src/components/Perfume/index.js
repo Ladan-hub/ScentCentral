@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { readPerfumeThunk } from "../../store/perfumes";
+import { useHistory, useParams } from "react-router-dom";
+import { deletePerfumeThunk, readPerfumeThunk } from "../../store/perfumes";
 import "./Perfume.css"
 
 const Perfume = () => {
@@ -19,6 +19,9 @@ const Perfume = () => {
 
     const loggedInUser = useSelector((state) => state.session.user);
 
+    //useHistory
+    const history = useHistory();
+
     // useDispatch 
     const dispatch = useDispatch();
 
@@ -27,13 +30,28 @@ const Perfume = () => {
         dispatch(readPerfumeThunk(boutiqueId));
     }, [boutiqueId]);
 
+    // DELETE Dispatch 
+    const deletePerfumeEventHandler = async (id) => {
+      const deletePerfume = await dispatch(deletePerfumeThunk(id));
+      if (deletePerfume) {
+        history.push(`/boutiques/${boutiqueId}`)
+      }
+    };
+
+    // EDIT event handler 
+    const editPerfumeEventHandler = async(id) => {
+      history.push(`/${boutiqueId}/perfume/${id}/edit`)
+    }
+
     if (!perfumesArr) {
         return null;
     }
 
     return (
         <>
-        <h2>Fragrances</h2>
+        <div className="fragrance-title-container">
+        <h2 className="fragrance-title">Fragrances</h2>
+        </div>
         <main className="all-perfumes-container">
             {perfumesArr.map((perfume) => (
                 <main className="perfumes-container">
@@ -45,11 +63,33 @@ const Perfume = () => {
                     onError={event => {event.target.src = "https://ionicframework.com/docs/img/demos/thumbnail.svg"}}
                      />
                      </div>
-                     <div className="perfume-name">
+                     <div className="perfume-name-container">
                      <h4>{perfume.name}</h4>
                      </div>
                      <div className="perfume-sold-out">
                      {perfume?.numberAvailable === 0 ? <h3>Sold Out At This Location!</h3> : null}
+                     </div>
+                     <div className="perfume-buttons-container">
+                     {/* <span className="delete-boutique-button-container"> */}
+            {boutique?.userId === loggedInUser?.id ? (
+              <button
+                className="delete-perfume-button"
+                onClick={() => deletePerfumeEventHandler(perfume.id)}
+              >
+                Delete Perfume
+              </button>
+            ) : null}
+          {/* </span> */}
+          {/* <span className="delete-boutique-button-container"> */}
+            {boutique?.userId === loggedInUser?.id ? (
+              <button
+                className="edit-perfume-button"
+                onClick={() => editPerfumeEventHandler(perfume.id)}
+              >
+                Edit Perfume
+              </button>
+            ) : null}
+          {/* </span> */}
                      </div>
                 </main>
             ))}
@@ -60,3 +100,4 @@ const Perfume = () => {
 }
 
 export default Perfume; 
+

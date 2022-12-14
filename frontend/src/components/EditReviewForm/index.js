@@ -12,8 +12,8 @@ const EditReview = () => {
 
     const {reviewId} = useParams();
     const {boutiqueId} = useParams();
-    console.log("THIS IS THE REVIEW ID",reviewId)
-    console.log("this is the boutique id", boutiqueId)
+    // console.log("THIS IS THE REVIEW ID",reviewId)
+    // console.log("this is the boutique id", boutiqueId)
 
 
     const review = useSelector((state) => state.reviews[reviewId]);

@@ -1,5 +1,12 @@
+body {
+    margin: 0px;
+    background-color: #fff;
+}
 .boutique-name-container{
     margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .boutique-name{
@@ -7,25 +14,42 @@
     font-weight: 700;
 }
 
-.boutique-priceRange-country-city-container{
+.boutique-country-city-container{
    
     margin-top: 7px;
     margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boutique-priceRange-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boutique-priceRange{
+    font-weight: lighter;
 }
 
 .boutique-detail-country-city{
     font-family: sans-serif;
     margin-bottom: 5px;
+    font-weight: lighter;
 }
 
 .boutique-image-container{
     
     margin-left: 20px; 
-    margin-top: 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .single-boutique-image{
-    border-radius: 10px;
     height: 400px;
     width: 500px;
 }
@@ -33,8 +57,16 @@
 .boutique-address-container{
     
     margin-left: 20px;
-    margin-top: 7px;
+    margin-top: 20px;
     font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boutique-address{
+    font-size: 150%;
+    font-weight: lighter;
 }
 
 .review-button-container{
@@ -44,11 +76,17 @@
 }
 
 .review-button{
-    border: none;
-    color: white;
-    background-image: linear-gradient(to right, rgb(233,28,72), rgb(236,38,208));
-    height: 30px;
-    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
+ 
 }
 
 .all-reviews{
@@ -59,7 +97,10 @@
 
 .buttons-container{
     margin-left: 20px;
-    margin-top: 7px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .delete-boutique-button-container{
@@ -68,19 +109,45 @@
 }
 
 .delete-boutique-button{
-    border: none;
-    color: white;
-    background-image: linear-gradient(to right, rgb(233,28,72), rgb(236,38,208));
-    height: 30px;
-    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .go-to-edit-boutique-button{
-    border: none;
-    color: white;
-    background-image: linear-gradient(to right, rgb(233,28,72), rgb(236,38,208));
-    height: 30px;
-    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
+.go-to-create-perfume-button-container{
+    margin-left: 12px;
+}
+
+.go-to-create-perfume-button{
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
+}
 

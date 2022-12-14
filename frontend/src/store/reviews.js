@@ -91,7 +91,7 @@ export const updateReviewThunk = (editedReview, reviewId) => async(dispatch) => 
     })
     if (response.ok) {
       const review = await response.json();
-      console.log("THIS IS REVIEW FROM BACKEND!!!", review)
+    //   console.log("THIS IS REVIEW FROM BACKEND!!!", review)
       dispatch(updateReviewAction(review));
       return review;
     }
@@ -117,7 +117,7 @@ const reviewReducer = (state = {}, action) => {
         case UPDATE: {
             const newState = {...state};
             newState[action.review.id] = action.review;
-            console.log("NEW STATE COMING FROM REDUCER!!!", newState, action.review.id)
+            // console.log("NEW STATE COMING FROM REDUCER!!!", newState, action.review.id)
             return newState;
 
         }

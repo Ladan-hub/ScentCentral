@@ -1,14 +1,19 @@
 body {
     margin: 0px;
+    background-color: #fff;
+}
+
+.main-banner{
+    max-width: 100%;
+
 }
 
 .all-boutiques-container {
-    margin: 3%;
+    margin: 0.5%;
     display: flex;
    
     flex-wrap: wrap;
     justify-content: center;
-
  
 }
 
@@ -16,39 +21,51 @@ body {
 
     padding: 3px;
     
+    
 }
 
 .boutique-image {
     width: 310px;
     height: 290px;
-
-    border-radius: 10px;
+    cursor: pointer;
 }
 
 .boutique-info-container{
     margin-top: 0.5em;
     margin-left: 2em;
+    margin-left: 21px;
 }
 
 .boutique-name{
-    font-weight: 700;
     font-family: sans-serif;
-    padding: 0px;
+    /* padding: 0px; */
+    cursor: pointer;
+    margin-bottom: 5px;
+   
 }
 
 .boutique-country-city{
-   
+   margin-bottom: 20px;
     font-family: sans-serif;
+    font-weight: lighter;
+    cursor: default;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }
 
 .boutique-price-range{
-    font-weight: 700;
+    font-weight: lighter;
     font-family: sans-serif;
+    cursor: default;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 
 }
 
 .footer{
-    background-color: #FF5A5F;
+    background-color: #111111;
     padding: 20px;
 }
 

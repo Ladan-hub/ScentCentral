@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from 'react-redux';
+import {useHistory} from 'react-router-dom';
 import * as sessionActions from '../../store/session';
 import "./ProfileButton.css"
 
@@ -29,6 +30,11 @@ function ProfileButton({ user }) {
     dispatch(sessionActions.logout());
   };
 
+  const history = useHistory();
+  const myBookings = () => {
+    history.push(`/bookings`);
+  }
+
   return (
     <>
       <button className="profile-button" onClick={openMenu}>
@@ -40,6 +46,11 @@ function ProfileButton({ user }) {
           <li className="logout-button-li">
           
             <button className="logout-button" onClick={logout}>Log Out</button>
+    
+          </li>
+          <li className="logout-button-li">
+          
+            <button className="logout-button" onClick={myBookings}>My Bookings</button>
     
           </li>
         </ul>
