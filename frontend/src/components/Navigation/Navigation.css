@@ -8,22 +8,38 @@ body{
     
     display: flex;
     flex-direction: row;
+    justify-content: center;
  }
+
+ .logo-container{
+    margin-left: 30px;
+ }
+
 .home-button-logo {
-    padding: 15px 20px;
+   padding: 15px 20px;
    text-decoration: none;
    color: black;
    cursor: pointer;
-   border-radius: 0.20em;
+   /* border-radius: 0.20em; */
 }
 
-.li-elements-home{
-    list-style: none;
+#logo{
+    height: 140px;
+    width: 170px;
 }
 
-.ul-elements-become-a-host{
+/* .li-elements-home{
     list-style: none;
-    margin-top: 55px;
+} */
+
+.become-a-host-and-profile-button{
+
+}
+.become-a-host-container{
+    list-style: none;
+    margin-top: 62px;
+
+    /* background-color: red; */
 
 }
 
@@ -48,7 +64,6 @@ body{
     list-style: none;
     align-items: flex-end;
 }
-
 .sign-up-navlink{
     text-decoration: none;
     border: solid #FF5A5F;
@@ -62,13 +77,10 @@ body{
     font-size: 14px;
 }
 
-#logo{
-    height: 120px;
-    width: 120px;
-}
+
 
 .profile-button{
-    margin-top: 25px;
+    margin-top: 33.5px;
     background-color: #111111;
     border: none;
     color: white;

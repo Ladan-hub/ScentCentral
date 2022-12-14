@@ -33,21 +33,21 @@ function Navigation({ isLoaded }){
     <>
     <nav className='nav-bar'>
       
-    <ul>
-      <li className='li-elements-home'>
+    <div className='logo-container'>
+      
         <NavLink className="home-button-logo" exact to="/">
           <img className='logo-img' id="logo" src={logo} />
         </NavLink>
         {isLoaded && sessionLinks}
-      </li>
-    </ul>
+     
+    </div>
     
     <section className='become-a-host-and-profile-button'>
-    <ul className='ul-elements-become-a-host'>
-      <li className='li-element-become-a-host'>
+    <div className='become-a-host-container'>
+      {/* <li className='li-element-become-a-host'> */}
       {loggedInUser ? <NavLink  className="NavLink-add-boutique" to="/boutiques/owned">Become a Host</NavLink> : null}
-      </li>
-    </ul>
+      {/* </li> */}
+    </div>
     
       <ul>
       <li className='li-elements-profile-button-loggedIn'>
