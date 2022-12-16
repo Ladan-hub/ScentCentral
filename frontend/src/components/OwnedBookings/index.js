@@ -31,6 +31,12 @@ const OwnedBookings = () => {
     }
   };
 
+  // Go to edit form 
+  const editBookingEventHandler = async (bookingId) => {
+    history.push(`/bookings/${bookingId}/edit`)
+   
+  }
+
   const history = useHistory();
 
   if (!bookings) {
@@ -81,6 +87,7 @@ const OwnedBookings = () => {
                         Date: {booking.startDate.slice(0, 10)}
                       </h4>
                       <h4 className="time">
+                        {/* {console.log("THIS IS MY BOOKING TIME", booking.startDate.toLocaleString())} */}
                         Time: {booking.startDate.slice(11, 19)} UTC
                       </h4>
                     </div>
@@ -94,6 +101,15 @@ const OwnedBookings = () => {
                     onClick={() => deleteBookingEventHandler(booking.id)}
                   >
                     Cancel Booking
+                  </button>
+                ) : null}
+              
+                {booking?.userId === loggedInUser?.id ? (
+                  <button
+                    className="delete-perfume-button"
+                    onClick={() => editBookingEventHandler(booking.id)}
+                  >
+                    Edit Booking
                   </button>
                 ) : null}
               </div>

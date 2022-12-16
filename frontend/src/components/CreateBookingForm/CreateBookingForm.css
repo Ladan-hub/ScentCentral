@@ -1,0 +1,64 @@
+.form-root{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.booking-form-container{
+    border: solid black;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.book-appointment-label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.book-appointment{
+    font-family: sans-serif;
+    font-size: larger;
+    font-weight: lighter;
+}
+
+.fields-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pick-a-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#date-input-field{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.add-booking-button-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.add-booking-button{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 5px;
+
+}

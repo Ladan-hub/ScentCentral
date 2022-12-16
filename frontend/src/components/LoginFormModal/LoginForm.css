@@ -55,6 +55,6 @@
 
 .error-message{
     color: #FF5A5F;
-    list-style: none;
+    /* list-style: none; */
     padding-right: 40px;
 }

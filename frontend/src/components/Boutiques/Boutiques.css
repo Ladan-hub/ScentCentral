@@ -5,8 +5,36 @@ body {
 
 .main-banner{
     max-width: 100%;
-
 }
+
+.box {
+position: relative;
+display: inline-block;
+}
+
+.text-over-banner{
+    position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 40%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 60%;
+        color: white;
+        font-size: medium;
+        /* display: flex;
+        flex-direction: row;
+        justify-content: flex-end; */
+        margin-left: 780px;
+        margin-top: -40px;
+}
+
+.text{
+    font-weight: lighter;
+}
+
+
 
 .all-boutiques-container {
     margin: 0.5%;

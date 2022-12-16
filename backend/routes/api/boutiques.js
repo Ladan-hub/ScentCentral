@@ -48,7 +48,7 @@ const boutiqueValidations = [
   .exists({checkFalsy: true})
   .withMessage('Please provide a boutique image URL')
   .isLength({max: 500})
-  .withMessage('Image URL must be less than 501 characters')
+  .withMessage('Image URL must be less than 500 characters')
   .isLength({min:10})
   .withMessage("Image URL must be at least 10 characters"),
   handleValidationErrors

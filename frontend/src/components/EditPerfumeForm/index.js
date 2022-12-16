@@ -25,6 +25,7 @@ const EditPerfumeForm = () => {
 
   // useStates
   const [name, setName] = useState(perfume.name);
+  console.log(name);
   const [numberAvailable, setNumberAvailable] = useState(perfume.numberAvailable);
   const [perfumeImgUrl, setPerfumeImgUrl] = useState(perfume.perfumeImgUrl);
   const [validationErrors, setValidationErrors] = useState([]);
@@ -72,10 +73,11 @@ const EditPerfumeForm = () => {
       boutiqueId: boutiqueId
     };
 
-    console.log("THIS IS THE EDITED PERFUME", editedPerfume)
+    // console.log("THIS IS THE EDITED PERFUME", editedPerfume)
 
 
     dispatch(updatePerfumeThunk(editedPerfume, perfumeId));
+    // console.log("EDITED PERFUME", editedPerfume)
     reset();
   };
 
@@ -91,7 +93,9 @@ const EditPerfumeForm = () => {
     loggedInUser && (
       <main className="form-root">
       <div className="boutique-form-container">
+        <div className="edit-perfume-container">
         <h1 className="add-boutique">Edit Perfume</h1>
+        </div>
         <div className="error-message-container">
           <ul className="add-boutique-form-errors-ul">
             {validationErrors.map((validationError) => (
@@ -138,7 +142,7 @@ const EditPerfumeForm = () => {
           </label>
           </div>
           <div className="add-boutique-button-container">
-          <button disabled={validationErrors.length > 0} className="add-boutique-button"  type="submit">
+          <button disabled={validationErrors.length > 0} id="edit-perfume-button"  type="submit">
             Edit Perfume!
           </button>
           </div>

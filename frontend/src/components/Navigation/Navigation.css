@@ -32,11 +32,8 @@ body{
     list-style: none;
 } */
 
-.become-a-host-and-profile-button{
-
-}
 .become-a-host-container{
-    list-style: none;
+    /* list-style: none; */
     margin-top: 62px;
 
     /* background-color: red; */
@@ -45,15 +42,14 @@ body{
 
 .NavLink-add-boutique{
     text-decoration: none;
-    font-family: sans-serif;
     font-weight: lighter;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #ffffff;
 }
 
 
 .become-a-host-and-profile-button {
-    list-style: none;
+    /* list-style: none; */
     display: flex;
     margin-left: 950px;
     
@@ -63,20 +59,21 @@ body{
 .li-elements-profile-button-loggedIn{
     list-style: none;
     align-items: flex-end;
+    
 }
+
 .sign-up-navlink{
     text-decoration: none;
-    border: solid #FF5A5F;
-    background-color: #FF5A5F;
+    border: solid 1.8px white;
+    background-color: white;
     border-radius: 5px;
     padding: 5px;
     padding-left:7px;
     padding-right: 7px;
-    color: white;
+    color: black;
     font-family: sans-serif;
     font-size: 14px;
 }
-
 
 
 .profile-button{

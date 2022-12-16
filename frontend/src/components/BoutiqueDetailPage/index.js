@@ -66,7 +66,7 @@ const BoutiqueDetail = () => {
     return (
       <>
         <div className="boutique-name-container">
-          <h1 className="boutique-name">{boutique.name}</h1>
+          <h1 id="boutique-name">{boutique.name}</h1>
         </div>
         <div className="boutique-country-city-container">
         <div className="boutique-detail-country-city">
@@ -82,7 +82,7 @@ const BoutiqueDetail = () => {
             className="single-boutique-image"
             src={boutique.imageUrl}
             alt="boutique preview"
-            onError={event => {event.target.src = "https://ionicframework.com/docs/img/demos/thumbnail.svg"}}
+            onError={event => {event.target.src = "https://library.tamu.edu/discovery/resources/images/default-thumbnail.jpg"}}
           />
         </div>
         <div className="boutique-address-container">

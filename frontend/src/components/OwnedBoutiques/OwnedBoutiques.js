@@ -41,7 +41,7 @@ const OwnedBoutiques = () => {
                 className="boutique-image"
                 src={boutique.imageUrl}
                 alt="boutique preview"
-                onError={event => {event.target.src = "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg"}}
+                onError={event => {event.target.src = "https://library.tamu.edu/discovery/resources/images/default-thumbnail.jpg"}}
               />
               </div>
               <div className="boutique-name">{boutique.name}</div>

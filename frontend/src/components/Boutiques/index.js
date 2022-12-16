@@ -26,8 +26,12 @@ const Boutiques = () => {
         {/* <div className="share-your-boutiques-container">
         <h1 className="share-your-boutiques-text">Share your perfume boutiques with the world!</h1>
         </div> */}
+        <div className="box">
         <img className="main-banner" src="https://www.bykilian.com/media/export/cms/NOVEMBER%202022/HEROBANNERS/FY23_HOLIDAY%20SEASON_DIGITAL%20CONTENT_MINIATURE%20SET_3854x1100.jpg" alt="main banner"/>
+        <div className="text-over-banner"><h1 className="text">Discover Our Exclusive <br />Selection of Boutiques <br />Around The World</h1></div>
+        </div>
             <main className="all-boutiques-container">
+            
                 
                 
                 
@@ -37,7 +41,7 @@ const Boutiques = () => {
                     <div className="boutique-image-container" key={boutique.id} >
         
                            
-                            <img onClick={() => history.push(`/boutiques/${boutique.id}`)} className="boutique-image" src={boutique.imageUrl} alt="boutique preview" onError={event => {event.target.src = "https://ionicframework.com/docs/img/demos/thumbnail.svg"}} />
+                            <img onClick={() => history.push(`/boutiques/${boutique.id}`)} className="boutique-image" src={boutique.imageUrl} alt="boutique preview" onError={event => {event.target.src = "https://library.tamu.edu/discovery/resources/images/default-thumbnail.jpg"}} />
                             </div>
                             <div className="boutique-info-container">
                            

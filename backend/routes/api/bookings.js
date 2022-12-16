@@ -24,6 +24,7 @@ router.post(
     })
 );
 
+
 // GET user's bookings (READ)
 router.get('/', restoreUser, asyncHandler(async (req,res) => {
     console.log("THIS IS THE REQ OBJECT --- BACKEND", req)
@@ -38,6 +39,17 @@ router.get('/', restoreUser, asyncHandler(async (req,res) => {
     return res.json(bookings)
 })
 ); 
+
+// UPDATE => updating a booking (UPDATE)
+router.put('/:id', requireAuth, asyncHandler(async (req,res) => {
+    const oldBooking = await db.Booking.findOne({
+        where: {
+            id: req.body.id
+        }
+    });
+    const newBooking = await oldBooking.update(req.body)
+    return res.json(newBooking);
+}));
 
 // DELETE => deleting a booking (DELETE)
 router.delete('/delete', requireAuth, asyncHandler(async (req,res) => {

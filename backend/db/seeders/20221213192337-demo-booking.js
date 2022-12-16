@@ -5,43 +5,43 @@ module.exports = {
    
       return queryInterface.bulkInsert('Bookings', [
       {
-        boutiqueId: 66,
-        userId: 9,
+        boutiqueId: 15,
+        userId: 2,
         startDate: '2023-01-04T10:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        boutiqueId: 66,
-        userId: 10,
+        boutiqueId: 18,
+        userId: 3,
         startDate: '2023-01-04T11:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        boutiqueId: 66,
-        userId: 11,
+        boutiqueId: 22,
+        userId: 4,
         startDate: '2023-01-04T13:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        boutiqueId: 70,
-        userId: 9,
+        boutiqueId: 16,
+        userId: 2,
         startDate: '2023-01-04T12:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        boutiqueId: 70,
-        userId: 10,
+        boutiqueId: 19,
+        userId: 3,
         startDate: '2023-04-04T11:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        boutiqueId: 70,
-        userId: 10,
+        boutiqueId: 27,
+        userId: 3,
         startDate: '2023-02-04T10:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()

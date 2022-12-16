@@ -60,7 +60,7 @@ const Perfume = () => {
                     <img className="perfume-img"
                     src={perfume.perfumeImgUrl}
                     alt="perfume preview"
-                    onError={event => {event.target.src = "https://ionicframework.com/docs/img/demos/thumbnail.svg"}}
+                    onError={event => {event.target.src = "https://library.tamu.edu/discovery/resources/images/default-thumbnail.jpg"}}
                      />
                      </div>
                      <div className="perfume-name-container">

@@ -9,9 +9,9 @@ body {
     justify-content: center;
 }
 
-.boutique-name{
-    font-family: sans-serif;
-    font-weight: 700;
+#boutique-name{
+    cursor: default;
+
 }
 
 .boutique-country-city-container{
@@ -69,10 +69,35 @@ body {
     font-weight: lighter;
 }
 
+
+.bookings-botton-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.go-to-create-booking-button{
+    /* margin-left: 39.9px; */
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
 .review-button-container{
     
-    margin-left: 20px;
+    /* /* margin-left: 20px; */
     margin-top: 20px;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
 }
 
 .review-button{

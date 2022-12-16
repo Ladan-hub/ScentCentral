@@ -74,5 +74,12 @@ body {
     padding: 5px;
 }
 
+.perfume-sold-out{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
     
 

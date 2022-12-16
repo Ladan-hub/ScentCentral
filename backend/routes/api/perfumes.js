@@ -10,7 +10,29 @@ const {
   requireAuth,
 } = require("../../utils/auth");
 
-// DON'T FORGET BACKEND VALIDATIONS!!!
+// Backend Validations 
+const perfumeValidations = [
+  check('name')
+  .exists({checkFalsy: true})
+  .withMessage("Please provide a name")
+  .isLength({min: 2 })
+  .withMessage("Name must be at least 2 characters")
+  .isLength({max: 250})
+  .withMessage("Name must be less than 250 characters"),
+  check('numberAvailable')
+  .exists({checkFalsy: true})
+  .withMessage("Please provide the inventory number")
+  .isIn({checkFalsy: true})
+  .withMessage("Please provide a valid number"),
+  check('perfumeImgUrl')
+  .exists({checkFalsy: true})
+  .withMessage("Please provide a perfume image URL")
+  .isLength({min:10})
+  .isLength({max: 500})
+  .withMessage('Image URL must be less than 500 characters'),
+  handleValidationErrors
+]
+
 
 // POST => creating a perfume (CREATE)
 router.post(

@@ -27,7 +27,7 @@ const CreatePerfumeForm = () => {
       errors.push("Name must be at least 2 characters");
     }
     if (name.length > 250) {
-      errors.push("Name must be less than 251 characters");
+      errors.push("Name must be less than 250 characters");
     }
     if (numberAvailable.length === 0) {
       errors.push("Enter the inventory number");
@@ -93,7 +93,9 @@ const CreatePerfumeForm = () => {
     loggedInUser && (
       <main className="form-root">
         <div className="boutique-form-container">
+          <div className="add-perfume-container">
           <h1 className="add-boutique">Create a Perfume</h1>
+          </div>
           <div className="error-message-container">
             <ul className="add-boutique-form-errors-ul">
               {validationErrors.map((validationError) => (
@@ -147,7 +149,7 @@ const CreatePerfumeForm = () => {
               <div className="add-boutique-button-container">
                 <button
                   disabled={validationErrors.length > 0}
-                  className="add-boutique-button"
+                  id="perfume-add-boutique-button"
                   type="submit"
                 >
                   Create Perfume!

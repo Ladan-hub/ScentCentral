@@ -73,7 +73,8 @@ const EditReview = () => {
                 <textarea className="review-field" name="content" onChange={(e) => setContent(e.target.value)} value={content}>
                 </textarea>
                 </div>
-                <div className='starDiv'>
+                
+                {/* <div className='star-container'>
                                             {stars < 1 && <i id='noStar1' onClick={() => starCount(1)} className="fa-regular fa-star"></i>}
                                             {stars > 0 && <i id='star1' onClick={() => starCount(1)} className="fa-solid fa-star"></i>}
                                             {stars < 2 && <i id='noStar2' onClick={() => starCount(2)} className="fa-regular fa-star"></i>}
@@ -85,9 +86,9 @@ const EditReview = () => {
                                             {stars < 5 && <i id='noStar5' onClick={() => starCount(5)} className="fa-regular fa-star"></i>}
                                             {stars > 4 && <i id='star5' onClick={() => starCount(4)} className="fa-solid fa-star"></i>}
 
-                                        </div>
-                <div className="add-review-button-container">
-                <button disabled={validationErrors.length > 0} className="add-review-button" type="submit">Submit</button>
+                                        </div> */}
+                <div id="add-review-button-container">
+                <button disabled={validationErrors.length > 0} id="add-new-review-button" type="submit">Submit</button>
                 </div>
                 </main>
             </form>

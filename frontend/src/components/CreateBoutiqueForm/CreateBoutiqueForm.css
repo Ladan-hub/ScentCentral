@@ -12,6 +12,29 @@
 
 }
 
+.add-perfume-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.error-message-container{
+    margin-left: -20px;
+    margin-bottom: 30px;
+
+}
+
+.add-boutique-form-errors-li{
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.label-create-boutique{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .fields-container{
     display: flex;
     flex-direction: column;
@@ -23,8 +46,10 @@
 }
 
 .add-boutique-button-container{
-    margin-left: 140px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 5px;
 }
 
 .add-boutique-field{
@@ -37,19 +62,39 @@
 .add-boutique{
     font-family: sans-serif;
     font-size: larger;
+    font-weight: lighter;
 }
 
-.add-boutique-button{
-    border: none;
-    color: white;
-    background-image: linear-gradient(to right, rgb(255, 90, 95), rgb(250,90,255));
-    height: 30px;
-    border-radius: 5px;
+/* .perfume-add-boutique-button{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 5px;
+} */
+
+#add-boutique-button{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 5px;
+
 }
 
 .add-boutique-form-errors-li{
-    list-style: none;
-    color: #FF5A5F;
+    /* list-style: none; */
+    color: black;
     font-weight: lighter;
     padding: 5px;
 }

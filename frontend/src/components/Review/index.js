@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./Review.css";
 import { deleteReviewThunk, readReviewThunk } from "../../store/reviews";
-import stars from "./star.PNG"
+
 
 const Review = () => {
   
@@ -49,16 +49,10 @@ const Review = () => {
   }
   return (
     <div>
-      {loggedInUser?.id === boutique?.userId ? <div className="you-cant-leave-review"> You can't leave a review for your own boutique!</div> : null}
+      {loggedInUser?.id === boutique?.userId ? null : null}
       <h2 className="review-label">Reviews</h2>
       {reviews.map((review) => (
         <div key={review.id} className="reviews-container">
-          <spam className="stars-image-container">
-            <img className="star-img" style={{width:"15px"}} src={stars}></img>
-          </spam>
-          <spam className="stars-number">
-          {review.stars}
-          </spam>
           <div className="one-review">
             {review.content}
             <div className="buttons-container">
