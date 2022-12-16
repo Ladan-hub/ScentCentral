@@ -6,10 +6,18 @@
     justify-content: center;
 }
 
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
 .welcome-message{
     margin-left: 20px;
     font-family: sans-serif;
-    color: white;
+    color: #111111;
 }
 
 
@@ -29,7 +37,7 @@
     background-color: white;
     border: solid lightgrey 1px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     
 }
 
@@ -41,7 +49,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #FF5A5F;
     padding: 10px;
     margin: auto;
     margin-top: 0px;
@@ -52,7 +59,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #FF5A5F;
     padding-bottom: 20px;
 
 }

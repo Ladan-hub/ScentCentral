@@ -18,6 +18,14 @@ export const readBoutiques = (boutiques) => {
   };
 };
 
+// AC for READING owned boutiques
+export const readBoutiquesOwned = (boutiques) => {
+  return {
+    type: READ_OWNED_BOUTIQUE,
+    boutiques,
+  };
+};
+
 // AC for READING the boutique detail
 export const readBoutiqueDetail = (boutique) => {
   return {
@@ -26,13 +34,6 @@ export const readBoutiqueDetail = (boutique) => {
   };
 };
 
-// AC for READING owned boutiques
-export const readBoutiquesOwned = (boutiques) => {
-  return {
-    type: READ_OWNED_BOUTIQUE,
-    boutiques,
-  };
-};
 
 // AC for CREATE
 export const createBoutiqueAction = (boutique) => {
@@ -85,12 +86,12 @@ export const readBoutiqueDetailThunk = (boutiqueId) => async (dispatch) => {
 
 // Thunk for fetching all owned boutiques from the database
 export const readBoutiquesOwnedThunk = () => async (dispatch) => {
-  console.log("HELLO FROM THUNK");
+  // console.log("HELLO FROM THUNK");
   const response = await csrfFetch("/api/boutiques/owned");
   if (response.ok) {
     console.log("RESPONSE WAS OK");
     const boutiques = await response.json();
-    console.log(boutiques)
+    // console.log(boutiques)
     dispatch(readBoutiquesOwned(boutiques));
     return boutiques;
   }

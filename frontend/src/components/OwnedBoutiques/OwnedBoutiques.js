@@ -23,12 +23,12 @@ const OwnedBoutiques = () => {
 
   return (
    <>
-      <section className="title-and-create-button-container">
-        <h1 className="welcome-message">Welcome to your boutiques</h1>
+      <section className="title">
+        <h1 className="welcome-message">Welcome to your Boutiques!</h1>
         </section>
       <div className="add-new-boutique-container">
         <NavLink className="add-new-boutique-navlink" to="/new">
-          <div className="add-new-boutique-text">Add a New Boutique!</div>
+          <div className="add-new-boutique-text">Add a New Boutique</div>
         </NavLink>
       </div>
       
@@ -41,7 +41,7 @@ const OwnedBoutiques = () => {
                 className="boutique-image"
                 src={boutique.imageUrl}
                 alt="boutique preview"
-                onError={event => {event.target.src = "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image.jpg"}}
+                onError={event => {event.target.src = "https://library.tamu.edu/discovery/resources/images/default-thumbnail.jpg"}}
               />
               </div>
               <div className="boutique-name">{boutique.name}</div>

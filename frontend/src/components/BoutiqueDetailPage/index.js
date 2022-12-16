@@ -6,7 +6,7 @@ import {
   readBoutiqueDetailThunk,
 } from "../../store/boutiques";
 import Review from "../Review";
-
+import Perfume from "../Perfume";
 import "./BoutiqueDetailPage.css";
 
 
@@ -52,28 +52,41 @@ const BoutiqueDetail = () => {
     history.push(`/boutiques/${boutiqueId}/review`);
   };
 
+  // Create perfume event handler
+  const createPerfumeEventHandler = async => {
+    history.push(`/boutiques/${boutiqueId}/perfume`)
+  }
+
+  // Create booking event handler
+  const createBookingEventHandler = async => {
+    history.push(`/boutiques/${boutiqueId}/booking`)
+  }
+
   if (boutique) {
     return (
       <>
         <div className="boutique-name-container">
-          <h1 className="boutique-name">{boutique.name}</h1>
+          <h1 id="boutique-name">{boutique.name}</h1>
         </div>
-        <div className="boutique-priceRange-country-city-container">
+        <div className="boutique-country-city-container">
         <div className="boutique-detail-country-city">
         {reviews.length} reviews . {boutique.country}, {boutique.city}
           </div>
+          </div>
+         <div className="boutique-priceRange-container">
           <div className="boutique-priceRange">{boutique.priceRange}</div>
-        </div>
+          </div>
+        
         <div className="boutique-image-container">
           <img
             className="single-boutique-image"
             src={boutique.imageUrl}
             alt="boutique preview"
-            onError={event => {event.target.src = "https://ionicframework.com/docs/img/demos/thumbnail.svg"}}
+            onError={event => {event.target.src = "https://library.tamu.edu/discovery/resources/images/default-thumbnail.jpg"}}
           />
         </div>
         <div className="boutique-address-container">
-          <div>{boutique.address}</div>
+          <div className="boutique-address">{boutique.address}</div>
         </div>
         <section className="buttons-container">
           <span className="delete-boutique-button-container">
@@ -96,14 +109,32 @@ const BoutiqueDetail = () => {
               </button>
             ) : null}
           </span>
-          <div className="review-button-container">
-            {/* {reviews.map((review) => {if (review.userId){
-              (
-                <div>
-                  <button>You already left a review!</button>
-                </div>
-              )
-            }})} */}
+          <span className="go-to-create-perfume-button-container">
+            {boutique?.userId === loggedInUser?.id ? (
+              <button
+                className="go-to-create-perfume-button"
+                onClick={createPerfumeEventHandler}
+              >
+                Create Perfume
+              </button>
+            ) : null}
+          </span>
+          
+        </section>
+        <section className="all-perfumes">
+          <section>
+            <div>
+              <Perfume /> 
+            </div>
+          </section>
+          {boutique?.userId !== loggedInUser?.id ? (
+            <div className="bookings-botton-container">
+            <button className="go-to-create-booking-button" onClick={createBookingEventHandler}>Book an Apponitment</button>
+          </div>
+
+          ) : null }
+        </section>
+        <div className="review-button-container">
             { loggedInUser && boutique?.userId !== loggedInUser?.id ? (
         
               <button className="review-button" onClick={reviewEventHandler}>
@@ -111,12 +142,11 @@ const BoutiqueDetail = () => {
               </button>
             ) : null}
           </div>
-        </section>
         <section className="all-reviews">
           <section>
-              <div>
+              <spam>
                 <Review  />
-              </div>
+              </spam>
             </section> 
         </section>
       </>

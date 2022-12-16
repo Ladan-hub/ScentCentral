@@ -1,0 +1,85 @@
+body {
+    margin: 0px;
+}
+
+.fragrance-title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.fragrance-title{
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 200%;
+}
+
+.all-perfumes-container{
+    margin: 1%;
+    display: flex;
+   
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.perfumes-container {
+    padding: 3px;
+}
+
+.perfume-img{
+    width: 310px;
+    height: 290px;
+
+    border-radius: 10px;
+}
+
+.perfume-name-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.perfume-buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.delete-perfume-button{
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.edit-perfume-button{
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.perfume-sold-out{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    
+

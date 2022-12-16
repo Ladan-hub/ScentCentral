@@ -68,11 +68,13 @@ const ReviewForm = () => {
     loggedInUser && (
       <main className="form-root">
       <div className="review-form-container">
+        <div className="error-message-container">
         <ul className="error-messages-ul">
           {validationErrors.map((validationError) => (
-            <li className="error-messages-li" key={validationError}>{validationError}</li>
+            <li className="add-review-form-errors-li" key={validationError}>{validationError}</li>
           ))}
         </ul>
+        </div>
         <form className="review-form" onSubmit={reviewSubmitted}>
           <main className="fields-container">
             <div className="add-review-textarea">
@@ -84,22 +86,25 @@ const ReviewForm = () => {
             onChange={(e) => setContent(e.target.value)}
           ></textarea>
           </div>
-          <div className='starDiv'>
+          <div className="stars-and-button-container">
+          {/* <div className='star-container'>
                                             {stars < 1 && <i id='noStar1' onClick={() => starCount(1)} className="fa-regular fa-star"></i>}
                                             {stars > 0 && <i id='star1' onClick={() => starCount(1)} className="fa-solid fa-star"></i>}
                                             {stars < 2 && <i id='noStar2' onClick={() => starCount(2)} className="fa-regular fa-star"></i>}
                                             {stars > 1 && <i id='star2' onClick={() => starCount(1)} className="fa-solid fa-star"></i>}
-                                            {stars < 3 && <i id='noStar3' onClick={() => starCount(3)} className="fa-regular fa-star"></i>}
-                                            {stars > 2 && <i id='star3' onClick={() => starCount(2)} className="fa-solid fa-star"></i>}
-                                            {stars < 4 && <i id='noStar4' onClick={() => starCount(4)} className="fa-regular fa-star"></i>}
+                                            {stars < 3 && <i id='noStar3'  onClick={() => starCount(3)} className="fa-regular fa-star"></i>}
+                                            {stars > 2 && <i id='star3'  onClick={() => starCount(2)} className="fa-solid fa-star"></i>}
+                                            {stars < 4 && <i id='noStar4'  onClick={() => starCount(4)} className="fa-regular fa-star"></i>}
                                             {stars > 3 && <i id='star4' onClick={() => starCount(3)} className="fa-solid fa-star"></i>}
                                             {stars < 5 && <i id='noStar5' onClick={() => starCount(5)} className="fa-regular fa-star"></i>}
-                                            {stars > 4 && <i id='star5' onClick={() => starCount(4)} className="fa-solid fa-star"></i>}
-                                        </div>
-          <div className="add-review-button-container">
-          <button disabled={validationErrors.length > 0} className="add-review-button" type="submit">
+                                            {stars > 4 && <i id='star5'  onClick={() => starCount(4)} className="fa-solid fa-star"></i>}
+                                        </div> */}
+        
+          {/* <div className="add-review-button-container"> */}
+          <button disabled={validationErrors.length > 0} className="add-new-review-button" type="submit">
             Create Review
           </button>
+          {/* </div> */}
           </div>
           </main>
         </form>

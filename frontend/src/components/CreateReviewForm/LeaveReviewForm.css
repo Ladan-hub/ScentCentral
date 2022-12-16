@@ -1,0 +1,96 @@
+.form-root{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.review-form-container{
+
+    border: solid black;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    width: 258px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fields-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.error-message-container{
+    margin-left: -20px;
+    margin-bottom: 30px;
+}
+
+.add-review-form-errors-li{
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+.add-review-textarea{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    scroll-behavior: smooth;
+
+}
+
+.review-field{
+    font-family: sans-serif;
+    padding: 20px;
+    /* margin-left: 2px; */
+
+}
+
+.star-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+
+}
+
+
+/* .add-review-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} */
+
+.add-new-review-button{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 5px;
+
+}
+
+.review-error-messages-li{
+    /* list-style: none; */
+    color: black;
+    font-weight: lighter;
+    padding: 5px;
+}
+
+.stars-and-button-container{
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+}
+

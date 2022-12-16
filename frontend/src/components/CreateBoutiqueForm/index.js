@@ -103,16 +103,14 @@ const CreateBoutiqueForm = () => {
     history.push("/");
   };
 
-  // const brokenLinkImage = () => {
-  
-
-  // }
 
   return (
     loggedInUser && (
       <main className="form-root">
       <div className="boutique-form-container">
+        <div className="label-create-boutique">
         <h1 className="add-boutique">Create a Boutique</h1>
+        </div>
         <div className="error-message-container">
           <ul className="add-boutique-form-errors-ul">
             {validationErrors.map((validationError) => (
@@ -195,8 +193,8 @@ const CreateBoutiqueForm = () => {
           </label>
           </div>
           <div className="add-boutique-button-container">
-          <button disabled={validationErrors.length > 0} className="add-boutique-button"  type="submit">
-            Create Boutique!
+          <button disabled={validationErrors.length > 0} id="add-boutique-button"  type="submit">
+            Create Boutique
           </button>
           </div>
           </main>

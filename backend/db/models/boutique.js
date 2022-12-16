@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     Boutique.belongsTo(models.User, {foreignKey: 'userId'})
     Boutique.hasMany(models.Review, {foreignKey: 'boutiqueId', onDelete: "cascade", hooks:true})
     Boutique.hasMany(models.Perfume, {foreignKey: 'boutiqueId', onDelete: "cascade", hooks:true})
+    Boutique.hasMany(models.Booking, {foreignKey: 'boutiqueId', onDelete: "cascade", hooks:true })
   };
   return Boutique;
 };

@@ -194,7 +194,7 @@ const EditBoutiqueForm = () => {
           <div className="edit-boutique-button-container">
           <button
             disabled={validationErrors.length > 0}
-            className="add-boutique-button"
+            id="add-boutique-button"
             type="submit"
           >
             Submit Edit

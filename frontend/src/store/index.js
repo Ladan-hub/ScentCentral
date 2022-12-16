@@ -3,12 +3,16 @@ import thunk from "redux-thunk";
 import sessionReducer from './session';
 import boutiqueReducer from "./boutiques";
 import reviewReducer from "./reviews";
+import perfumeReducer from "./perfumes";
+import bookingReducer from "./bookings";
 
 // Root Reducer
 const rootReducer = combineReducers({
     session: sessionReducer,
     boutiques: boutiqueReducer,
-    reviews: reviewReducer
+    reviews: reviewReducer,
+    perfumes: perfumeReducer,
+    bookings: bookingReducer
   });
   
 

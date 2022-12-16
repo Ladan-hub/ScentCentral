@@ -1,0 +1,76 @@
+.welcome-message{
+    margin-left: 20px;
+    font-family: sans-serif;
+    color: #111111;
+}
+
+.owned-bookings-container{
+    margin: 0.5%;
+    display: flex;
+   
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.one-booking-container{
+    padding: 50px;
+}
+
+.img-container{
+    margin-left: 20px; 
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.boutique-image {
+    width: 310px;
+    height: 290px;
+    cursor: pointer;
+}
+
+.boutique-address-container{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boutique-address{
+    cursor: default;
+}
+
+.start-date-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.date{
+    font-weight: lighter;
+    cursor: default;
+}
+
+.time{
+    font-weight: lighter;
+    cursor: default;
+}
+
+.booking-buttons-container{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+
+
+
+

@@ -33,20 +33,25 @@
     margin-left: 31px;
 }
 
-.add-review-button-container{
-    margin-left: 107px;
+#add-review-button-container{
+    margin-left: 92px;
 }
 
-.add-review-button{
-    border: none;
-    color: white;
-    background-image: linear-gradient(to right, rgb(255, 90, 95), rgb(250,90,255));
-    height: 30px;
-    border-radius: 5px;
+#add-new-review-button{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
+    /* margin-right: 10px; */
 }
 
 .error-messages-li{
-    list-style: none;
+    /* list-style: none; */
     color: #FF5A5F;
     font-weight: lighter;
     padding: 5px;
