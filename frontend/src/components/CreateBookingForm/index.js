@@ -19,8 +19,8 @@ const CreateBookingForm = () => {
   const [validationErrors, setValidationErrors] = useState([]);
 
   const now = new Date()
-  // console.log("THIS IS THE CURRENT MINUTE", now.getMinutes());
-  // console.log("this is the start TIME", +startDate.slice(14))
+  console.log("THIS IS MY NOW", now);
+  console.log("this is user's now", startDate)
 
   // Validation Errors
   useEffect(() => {
@@ -28,11 +28,14 @@ const CreateBookingForm = () => {
     if (startDate === "") {
       errors.push("Please choose a date and time for your appointment")
     }
-    if ( startDate !== ""  && now.getDate() > +startDate.slice(8, -6) ) {
+    else if ( startDate !== ""  && now.getDate() > +startDate.slice(8, -6) ) {
       errors.push("You can't pick a day in the past")
     }
-    if ( startDate !== "" && (now.getHours() > +startDate.slice(11, -3) || now.getMinutes() > +startDate.slice(14))) {
+    else if ( startDate !== "" && now.getDate() === +startDate.slice(8, -6) && (now.getHours() > +startDate.slice(11, -3))) {
       errors.push("You can't pick a time in the past")
+    }
+    else if ( startDate !== "" && now.getDate() === +startDate.slice(8, -6) && now.getMinutes() > +startDate.slice(14)) {
+      errors.push("You can't pick a minute in the past")
     }
     setValidationErrors(errors)
   }, [startDate])

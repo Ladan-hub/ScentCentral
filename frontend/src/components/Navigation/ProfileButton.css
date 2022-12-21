@@ -17,10 +17,13 @@
 .profile-dropdown-container{
     /* background-color: red; */
     border-radius: 2px;
-    top: 100px;
-    left: 143px;
-    margin-top: 5px;
-    margin-right: 50px;
+    /* top: 100px;*/
+    right: 137px; 
+    bottom: 30px;
+    position: absolute;
+    z-index: 10;
+    padding: 10px;
+    background-color: #111111;
     
     
 }
