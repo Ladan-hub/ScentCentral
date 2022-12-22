@@ -127,7 +127,7 @@ const BoutiqueDetail = () => {
               <Perfume /> 
             </div>
           </section>
-          {boutique?.userId !== loggedInUser?.id ? (
+          {loggedInUser && boutique?.userId !== loggedInUser?.id ? (
             <div className="bookings-botton-container">
             <button className="go-to-create-booking-button" onClick={createBookingEventHandler}>Book an Apponitment</button>
           </div>

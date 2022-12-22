@@ -35,11 +35,15 @@
 }
 
 .signup-button{
-    border: none;
-    color: white;
-    background-color: #FF5A5F;
-    height: 30px;
-    border-radius: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    background-color: white;
+    border: solid lightgrey 1px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 5px;
+
 }
