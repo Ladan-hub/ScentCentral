@@ -5,44 +5,30 @@ module.exports = {
    
       return queryInterface.bulkInsert('Bookings', [
       {
-        boutiqueId: 71,
-        userId: 21,
+        boutiqueId: 1,
+        userId: 2,
         startDate: '2023-01-04T10:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        boutiqueId: 74,
-        userId: 23,
+        boutiqueId: 1,
+        userId: 3,
         startDate: '2023-01-04T11:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        boutiqueId: 84,
-        userId: 24,
+        boutiqueId: 2,
+        userId: 2,
         startDate: '2023-01-04T13:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        boutiqueId: 84,
-        userId: 21,
+        boutiqueId: 2,
+        userId: 3,
         startDate: '2023-01-04T12:00:00000Z',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        boutiqueId: 80,
-        userId: 23,
-        startDate: '2023-04-04T11:00:00000Z',
-        createdAt: new Date(),
-        updatedAt: new Date()
-      },
-      {
-        boutiqueId: 78,
-        userId: 23,
-        startDate: '2023-02-04T10:00:00000Z',
         createdAt: new Date(),
         updatedAt: new Date()
       }
@@ -52,8 +38,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    
-      return queryInterface.bulkDelete('Bookings', null, {});
-
+      return queryInterface.bulkDelete('Bookings', null, {truncate: true, cascade: true, restartIdentity: true });
   }
 };
