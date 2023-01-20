@@ -68,6 +68,13 @@
     justify-content: center;
 }
 
+.no-bookings-owned{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
 
 
 
