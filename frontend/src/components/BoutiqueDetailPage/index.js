@@ -20,10 +20,13 @@ const BoutiqueDetail = () => {
   const loggedInUser = useSelector((state) => state.session.user);
   const boutique = useSelector((state) => state.boutiques[boutiqueId]);
   const reviews = useSelector((state) => Object.values(state.reviews));
-  console.log("This is the reviews array", reviews)
+  // console.log("This is the reviews array", reviews)
 
   const reviewsObj = useSelector((state) => state.reviews);
-  console.log("THIS IS REVIEWS OBJ", reviewsObj)
+  // console.log("THIS IS REVIEWS OBJ", reviewsObj)
+
+  const bookings = useSelector((state) => Object.values (state.bookings))
+  console.log("THESE ARE THE BOOKINGS", bookings)
 
 
   // Thunk Action Dispatch for reading the boutique detail
@@ -127,7 +130,7 @@ const BoutiqueDetail = () => {
               <Perfume /> 
             </div>
           </section>
-          {loggedInUser && boutique?.userId !== loggedInUser?.id ? (
+          {loggedInUser && boutique?.userId !== loggedInUser?.id  ? (
             <div className="bookings-botton-container">
             <button className="go-to-create-booking-button" onClick={createBookingEventHandler}>Book an Apponitment</button>
           </div>
