@@ -37,4 +37,10 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
+const http = require('http');
+
+setInterval(() => {
+  http.get("http://example.herokuapp.com");
+}, 25 * 60 * 1000); // every 25 minutes
+
 module.exports = router;

@@ -11,7 +11,7 @@ const CreateBookingForm = () => {
   const loggedInUser = useSelector((state) => state.session.user);
   const { boutiqueId } = useParams();
   const bookings = useSelector((state) => Object.values (state.bookings))
-  console.log("THIS IS YOUR CURRENT BOOKINGS", bookings)
+  // console.log("THIS IS MY BOOKING", bookings)
   // console.log("THIS IS THE BOUTIQUE ID", boutiqueId);
 
   //useStates
@@ -49,6 +49,11 @@ const CreateBookingForm = () => {
   const dispatch = useDispatch()
   const bookingSubmitted = async (e) => {
     e.preventDefault();
+    // bookings.map((booking) => {
+    //   if (booking.id && loggedInUser.id === booking.userId ) {
+    //     alert('You already have a booking for this boutique.')
+    //   } 
+    // })
     const bookingToCreate = {
         boutiqueId: boutiqueId,
         userId: loggedInUser.id,
@@ -65,9 +70,21 @@ const CreateBookingForm = () => {
     history.push(`/boutiques/${boutiqueId}`)
   }
 
-  return (
+
+return (
     loggedInUser && (
+      
       <main className="form-root">
+        {/* {bookings.map((booking) => (
+          <div className="no-booking">
+            {loggedInUser?.id === booking?.userId ? (
+              <h1>You already have a booking for this boutique at {booking.startDate}</h1>
+
+            ) :null  }
+
+          </div>
+        ))} */}
+        
         <div className="booking-form-container">
           <div className="book-appointment-label">
             <h1 className="book-appointment">Book an Appointment</h1>

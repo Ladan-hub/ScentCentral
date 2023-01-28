@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { NavLink, useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { readBookingsOwnedThunk } from "../../store/bookings";
 import { readBoutiquesThunk } from "../../store/boutiques";
 import { deleteBookingThunk } from "../../store/bookings";
@@ -14,9 +14,10 @@ const OwnedBookings = () => {
   // UseSelectors
   const loggedInUser = useSelector((state) => state.session.user);
   const bookings = useSelector((state) => Object.values(state.bookings));
+  // console.log("THIS IS MY BOOKING", bookings)
   const boutiques = useSelector((state) => Object.values(state.boutiques));
   const boutiquesObj = useSelector((state) => state.boutiques);
-  console.log("THIS IS THE BOUTIQUES OBJECT!!!", boutiquesObj);
+  // console.log("THIS IS THE BOUTIQUES OBJECT!!!", boutiquesObj);
 
   useEffect(() => {
     dispatch(readBookingsOwnedThunk());
