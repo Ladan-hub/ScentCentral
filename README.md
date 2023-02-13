@@ -1,6 +1,6 @@
 # ScentCentral
 
-ScentCentral is inspired by Yelp's functionality and the Kilian Paris User Interface. This app allows you to view perfume boutiques around the world, look through a list of all their available perfumes, as well as book appointments to receive consultation to find your favorite scent. You can also host your own boutiques.
+Inspired by Yelp's functionality and the Kilian Paris user interface, ScentCentral offers an immersive and interactive experience for exploring perfume boutiques around the world. Browse through a comprehensive list of available perfumes, book appointment for personalized consultations, and find your perfect scent. If you're a boutique owner, you can also host your own store on the app and reach a wider audience.
 
 Live Link to ScentCentral: https://scentcentral.herokuapp.com/
 
@@ -25,6 +25,8 @@ Live Link to ScentCentral: https://scentcentral.herokuapp.com/
 # Booking Form
 
 <img width="1440" alt="Screen Shot 2023-01-18 at 6 29 56 PM" src="https://user-images.githubusercontent.com/77522504/213205434-b7f85ad3-6fdb-41d3-a887-198d67a0e48e.png">
+
+# Code I'm Proud Of
 
 
 
