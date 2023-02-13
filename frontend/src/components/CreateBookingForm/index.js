@@ -19,8 +19,6 @@ const CreateBookingForm = () => {
   const [validationErrors, setValidationErrors] = useState([]);
 
   const now = new Date()
-  console.log("THIS IS MY NOW", now);
-  console.log("this is user's now", startDate)
 
   // Validation Errors
   useEffect(() => {
