@@ -18,7 +18,7 @@ const CreateBookingForm = () => {
   const [startDate, setStartDate] = useState("");
   const [validationErrors, setValidationErrors] = useState([]);
 
-  const now = new Date()
+  const now = new Date() 
 
   // Validation Errors
   useEffect(() => {
