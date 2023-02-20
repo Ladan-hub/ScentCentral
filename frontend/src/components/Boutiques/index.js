@@ -1,3 +1,4 @@
+import { GoogleApiWrapper } from "google-maps-react";
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -27,7 +28,7 @@ const Boutiques = () => {
         <h1 className="share-your-boutiques-text">Share your perfume boutiques with the world!</h1>
         </div> */}
         <div className="box">
-        <img className="main-banner" src="https://www.bykilian.com/media/export/cms/NOVEMBER%202022/HEROBANNERS/FY23_HOLIDAY%20SEASON_DIGITAL%20CONTENT_MINIATURE%20SET_3854x1100.jpg" alt="main banner"/>
+        <img className="main-banner" src="https://www.bykilian.com/media/export/cms/APRIL%202020/APRIL%202020/TOP_BANNER_3840x960_LIQUORS_DESKTOP.jpg" alt="main banner"/>
         <div className="text-over-banner"><h1 className="text">Discover Our Exclusive <br />Selection of Boutiques <br />Around The World</h1></div>
         </div>
             <main className="all-boutiques-container">

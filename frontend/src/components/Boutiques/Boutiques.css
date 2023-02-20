@@ -12,27 +12,20 @@ position: relative;
 display: inline-block;
 }
 
-.text-over-banner{
+.text-over-banner {
     position: absolute;
-        z-index: 999;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        top: 40%; /* Adjust this value to move the positioned div up and down */
-        text-align: center;
-        width: 60%;
-        color: white;
-        font-size: medium;
-        /* display: flex;
-        flex-direction: row;
-        justify-content: flex-end; */
-        margin-left: 780px;
-        margin-top: -40px;
-        animation-name: slide-in;
-    animation-duration: 1s;
-}
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-family: 'Lora', serif;
+    font-size: medium;
+    padding: 1rem 0;
+    margin-left: 1060px;
+    margin-top: -2px;
+  }
 
-@keyframes slide-in {
+/* @keyframes slide-in {
     from {
       opacity: 0;
       transform: translateX(100%);
@@ -42,7 +35,7 @@ display: inline-block;
       opacity: 1;
       transform: translateX(0);
     }
-  }
+  } */
 
 .text{
     font-weight: lighter;
