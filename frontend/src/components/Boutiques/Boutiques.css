@@ -29,6 +29,20 @@ display: inline-block;
     font-weight: lighter;
 }
 
+.our-boutiques{
+    /* font-family: var(--heading-font-family); */
+    font-family: 'Lora', serif;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+
+}
 
 .all-boutiques-container {
     display: flex;

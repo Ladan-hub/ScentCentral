@@ -28,10 +28,16 @@ body {
 }
 
 .perfume-img{
-    width: 310px;
+    /* width: 310px;
     height: 290px;
+    border-radius: 10px; */
 
-    border-radius: 10px;
+    width: 600px;
+    height: 440px;
+    
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 1px; 
 }
 
 .perfume-name-container{

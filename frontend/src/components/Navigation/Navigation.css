@@ -33,18 +33,35 @@ body{
 } */
 
 .become-a-host-container{
-    /* list-style: none; */
     margin-top: 62px;
-
-    /* background-color: red; */
-
 }
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+  }
+
+  .NavLink{
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-right: 20px;
+    font-family: 'Helvetica', sans-serif;
+  }
 
 .NavLink-add-boutique{
     text-decoration: none;
     font-weight: lighter;
     font-size: 1.1rem;
     color: #ffffff;
+}
+
+.NavLink:hover {
+  border-bottom: 2px solid #ffffff;
 }
 
 
