@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Open Baskerville';
+    src: url('../../context/OpenBaskerville-0.0.53.otf');
+}
+
 body {
     margin: 0px;
     background-color: #fff;
@@ -18,8 +23,8 @@ display: inline-block;
     transform: translateY(-50%);
     text-align: center;
     color: #fff;
-    font-family: 'Lora', serif;
-    font-size: medium;
+    /* font-family: 'Lora', serif; */
+    font-family: "Open Baskerville";
     padding: 1rem 0;
     margin-left: 1060px;
     margin-top: -2px;
@@ -31,7 +36,7 @@ display: inline-block;
 
 .our-boutiques{
     /* font-family: var(--heading-font-family); */
-    font-family: 'Lora', serif;
+    font-family: "Open Baskerville";
     font-size: 34px;
     font-style: normal;
     font-weight: 400;
@@ -68,13 +73,13 @@ display: inline-block;
 
 .boutique-info-container{
     margin-top: 0.5em;
-    margin-left: 2em;
-    margin-left: 21px;
+    /* margin-left: 3em; */
+    margin-left: 40px;
 }
 
 .boutique-name{
-    font-family: 'Lora', serif;
-    /* padding: 0px; */
+    /* font-family: 'Lora', serif; */
+    font-family: "Open Baskerville";
     cursor: pointer;
     margin-bottom: 5px;
     font-weight: bold;
@@ -83,7 +88,7 @@ display: inline-block;
 
 .boutique-country-city{
    margin-bottom: 20px;
-    font-family: sans-serif;
+   font-family: "Open Baskerville";
     font-weight: lighter;
     cursor: default;
     margin-top: 5px;
@@ -93,7 +98,7 @@ display: inline-block;
 
 .boutique-price-range{
     font-weight: lighter;
-    font-family: sans-serif;
+    font-family: "Open Baskerville";
     cursor: default;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -111,7 +116,7 @@ display: inline-block;
 .footer-github-link{
     text-decoration: none;
     color:white;
-    font-family: sans-serif;
+    font-family: "Open Baskerville";
     font-weight: bold;
     font-size: larger;
 }
@@ -119,7 +124,7 @@ display: inline-block;
 .footer-linkedIn{
     text-decoration: none;
     color:white;
-    font-family: sans-serif;
+    font-family: "Open Baskerville";
     font-weight: bold;
     font-size: larger;
     margin-left: 20px;

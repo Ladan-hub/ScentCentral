@@ -38,7 +38,7 @@ const Boutiques = () => {
           </h1>
         </div>
       </div>
-      <div> <h1 className="our-boutiques">Our Boutiques </h1></div>
+      <div> <h1 className="our-boutiques">Our Boutiques</h1></div>
       <main className="all-boutiques-container">
         {boutiques.map((boutique) => (
           <main className="boutiques-container">
