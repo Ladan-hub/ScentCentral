@@ -9,7 +9,7 @@ const CreateBookingForm = () => {
   const loggedInUser = useSelector((state) => state.session.user);
   const { boutiqueId } = useParams();
   const bookings = useSelector((state) => Object.values(state.bookings));
-  console.log("these are all the bookings coming from redux store", bookings)
+  console.log("these are all the bookings coming from redux store", bookings);
 
   //useStates
   const [startDate, setStartDate] = useState("");
@@ -45,21 +45,22 @@ const CreateBookingForm = () => {
   const bookingSubmitted = async (e) => {
     e.preventDefault();
 
+    const hasExistingBooking = bookings.some((booking) => {
+      return (
+        booking.boutiqueId == boutiqueId && booking.userId == loggedInUser.id
+      );
+    });
 
-    bookings.map(booking => {
-      if (booking.boutiqueId == boutiqueId && booking.userId == loggedInUser.id) {
-        alert("You already have a booking for this boutique.")
-      }
+    if (hasExistingBooking) {
+      alert("You already have a booking for this boutique.");
       return;
-    })
+    }
 
-    
     const bookingToCreate = {
       boutiqueId: boutiqueId,
       userId: loggedInUser.id,
       startDate,
     };
-
 
     dispatch(createBookingThunk(bookingToCreate));
     reset();
