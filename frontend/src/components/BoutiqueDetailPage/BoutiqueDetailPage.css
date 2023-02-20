@@ -130,8 +130,8 @@ body {
 }
 
 .buttons-container{
-    margin-left: 20px;
-    margin-top: 30px;
+    /* margin-left: 12px; */
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -155,20 +155,23 @@ body {
     padding: 14px;
     text-transform: uppercase;
     font-size: 0.8rem;
+    border-radius: 0.1rem;
 
 }
 
 .go-to-edit-boutique-button{
+    font-family: 'Open Baskerville';
     margin-left: 20px;
     text-decoration: none;
-    font-family: 'Open Baskerville';
     font-weight: bold;
-    color: black;
+    background: #ffffff;
+    color: #000000;
     font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 10px;
+    border: 1px solid #111111;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
 }
 
 .go-to-create-perfume-button-container{
@@ -176,15 +179,17 @@ body {
 }
 
 .go-to-create-perfume-button{
+    font-family: 'Open Baskerville';
     margin-left: 20px;
     text-decoration: none;
-    font-family: 'Open Baskerville';
     font-weight: bold;
-    color: black;
+    background: #ffffff;
+    color: #000000;
     font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 10px;
+    border: 1px solid #111111;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
 }
 
