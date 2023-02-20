@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Open Baskerville';
+    src: url('../../context/OpenBaskerville-0.0.53.otf');
+}
+
 body {
     margin: 0px;
     background-color: #fff;
@@ -11,6 +16,7 @@ body {
 
 #boutique-name{
     cursor: default;
+    font-family: 'Open Baskerville';
 
 }
 
@@ -31,11 +37,12 @@ body {
 }
 
 .boutique-priceRange{
+    font-family: 'Open Baskerville';
     font-weight: lighter;
 }
 
 .boutique-detail-country-city{
-    font-family: sans-serif;
+    font-family: 'Open Baskerville';
     margin-bottom: 5px;
     font-weight: lighter;
 }
@@ -65,6 +72,7 @@ body {
 }
 
 .boutique-address{
+    font-family: 'Open Baskerville';
     font-size: 150%;
     font-weight: lighter;
 }
@@ -79,7 +87,7 @@ body {
 .go-to-create-booking-button{
     /* margin-left: 39.9px; */
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Open Baskerville';
     font-weight: bold;
     color: black;
     font-size: medium;
@@ -111,6 +119,7 @@ body {
     border: solid lightgrey 1px;
     border-radius: 10px;
     padding: 10px;
+    font-family: 'Open Baskerville';
  
 }
 
@@ -131,12 +140,13 @@ body {
 .delete-boutique-button-container{
 
     margin-right: 10px;
+    
 }
 
 .delete-boutique-button{
     margin-left: 20px;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Open Baskerville';
     font-weight: bold;
     color: black;
     font-size: medium;
@@ -149,7 +159,7 @@ body {
 .go-to-edit-boutique-button{
     margin-left: 20px;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Open Baskerville';
     font-weight: bold;
     color: black;
     font-size: medium;
@@ -166,7 +176,7 @@ body {
 .go-to-create-perfume-button{
     margin-left: 20px;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Open Baskerville';
     font-weight: bold;
     color: black;
     font-size: medium;
