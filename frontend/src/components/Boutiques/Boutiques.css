@@ -25,43 +25,30 @@ display: inline-block;
     margin-top: -2px;
   }
 
-/* @keyframes slide-in {
-    from {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-  
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  } */
-
 .text{
     font-weight: lighter;
 }
 
 
-
 .all-boutiques-container {
-    margin: 0.5%;
     display: flex;
-   
     flex-wrap: wrap;
     justify-content: center;
- 
-}
+    align-items: center;
+    margin: 2rem;
+  }
 
 .boutiques-container{
 
     padding: 3px;
     
-    
 }
+
 
 .boutique-image {
     width: 310px;
     height: 290px;
+  
     cursor: pointer;
 }
 
@@ -72,10 +59,11 @@ display: inline-block;
 }
 
 .boutique-name{
-    font-family: sans-serif;
+    font-family: 'Lora', serif;
     /* padding: 0px; */
     cursor: pointer;
     margin-bottom: 5px;
+    font-weight: bold;
    
 }
 
@@ -102,7 +90,9 @@ display: inline-block;
 .footer{
     background-color: #111111;
     padding: 20px;
+
 }
+
 
 .footer-github-link{
     text-decoration: none;
