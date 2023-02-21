@@ -117,11 +117,12 @@ const EditBoutiqueForm = () => {
 
   return (
     loggedInUser && (
+      <>
+      <div className="form-title-banner">
+        <h1 className="form-banner-text">Edit  boutique</h1>
+      </div>
       <main className="form-root">
       <div className="boutique-form-container">
-        <div className="edit-boutique-label-container">
-        <h1 className="edit-boutique">Edit Boutique</h1>
-        </div>
         <div className="error-message-container">
           <ul className="add-boutique-form-errors">
             {validationErrors.map((validationError) => (
@@ -130,8 +131,8 @@ const EditBoutiqueForm = () => {
           </ul>
         </div>
         <form className="add-boutique-form" onSubmit={editBoutiqueSubmitted}>
-          <main className="fields-container">
-          <label className="add-boutique-form-label">
+          
+          <label className="form-label">
             <input
               className="add-boutique-field"
               type="text"
@@ -141,7 +142,7 @@ const EditBoutiqueForm = () => {
               name="name"
             />
           </label>
-          <label className="add-boutique-form-label">
+          <label className="form-label">
             <input
               className="add-boutique-field"
               type="text"
@@ -151,7 +152,7 @@ const EditBoutiqueForm = () => {
               name="country"
             />
           </label>
-          <label className="add-boutique-form-label">
+          <label className="form-label">
             <input
               className="add-boutique-field"
               type="text"
@@ -161,7 +162,7 @@ const EditBoutiqueForm = () => {
               name="city"
             />
           </label>
-          <label className="add-boutique-form-label">
+          <label className="form-label">
             <input
               className="add-boutique-field"
               type="text"
@@ -171,7 +172,7 @@ const EditBoutiqueForm = () => {
               name="address"
             />
           </label>
-          <label className="add-boutique-form-label">
+          <label className="form-label">
             <input
               className="add-boutique-field"
               type="text"
@@ -181,7 +182,7 @@ const EditBoutiqueForm = () => {
               name="priceRange"
             />
           </label>
-          <label className="add-boutique-form-label">
+          <label className="form-label">
             <input
               className="add-boutique-field"
               type="text"
@@ -200,10 +201,11 @@ const EditBoutiqueForm = () => {
             Submit Edit
           </button>
           </div>
-          </main>
+    
         </form>
       </div>
       </main>
+      </>
     )
   );
 };
