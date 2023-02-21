@@ -65,11 +65,15 @@ const CreateBoutiqueForm = () => {
     // if (imageUrl.length > 500) {
     //   errors.push("Perfume image URL must be less than 500 characters");
     // }
-    if ((!imageUrl.endsWith(".jpg")) && (!imageUrl.endsWith(".png")) && (!imageUrl.endsWith(".gif"))) {
+    if (
+      !imageUrl.endsWith(".jpg") &&
+      !imageUrl.endsWith(".png") &&
+      !imageUrl.endsWith(".gif")
+    ) {
       errors.push("Image URL must end with .jpg, .png, or .gif");
     }
-    if((!imageUrl.startsWith("http://")) && (!imageUrl.startsWith("https://"))) {
-      errors.push("Image URL must start with http:// or https://")
+    if (!imageUrl.startsWith("http://") && !imageUrl.startsWith("https://")) {
+      errors.push("Image URL must start with http:// or https://");
     }
     setValidationErrors(errors);
   }, [name, country, city, address, priceRange, imageUrl]);
@@ -103,104 +107,111 @@ const CreateBoutiqueForm = () => {
     history.push("/");
   };
 
-
   return (
     loggedInUser && (
       <main className="form-root">
-      <div className="boutique-form-container">
-        <div className="label-create-boutique">
-        <h1 className="add-boutique">Create a Boutique</h1>
+        <div className="boutique-form-container">
+          <div className="label-create-boutique">
+            <h1 className="add-boutique">Create a Boutique</h1>
+          </div>
+          <div className="error-message-container">
+            <ul className="add-boutique-form-errors-ul">
+              {validationErrors.map((validationError) => (
+                <li
+                  className="add-boutique-form-errors-li"
+                  key={validationError}
+                >
+                  {validationError}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <form className="add-boutique-form" onSubmit={boutiqueSubmitted}>
+            <main className="fields-container">
+              <div className="add-boutique-form-label">
+                <label>
+                  <input
+                    className="add-boutique-field"
+                    type="text"
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                    placeholder="Boutique Name"
+                    name="name"
+                  />
+                </label>
+              </div>
+              <div>
+                <label className="add-boutique-form-label">
+                  <input
+                    className="add-boutique-field"
+                    type="text"
+                    onChange={(e) => setCountry(e.target.value)}
+                    value={country}
+                    placeholder="Country"
+                    name="country"
+                  />
+                </label>
+              </div>
+              <div>
+                <label className="add-boutique-form-label">
+                  <input
+                    className="add-boutique-field"
+                    type="text"
+                    onChange={(e) => setCity(e.target.value)}
+                    value={city}
+                    placeholder="City"
+                    name="city"
+                  />
+                </label>
+              </div>
+              <div>
+                <label className="add-boutique-form-label">
+                  <input
+                    className="add-boutique-field"
+                    type="text"
+                    onChange={(e) => setAddress(e.target.value)}
+                    value={address}
+                    placeholder="Address"
+                    name="address"
+                  />
+                </label>
+              </div>
+              <div>
+                <label className="add-boutique-form-label">
+                  <input
+                    className="add-boutique-field"
+                    type="text"
+                    onChange={(e) => setPriceRange(e.target.value)}
+                    value={priceRange}
+                    placeholder="Price Range"
+                    name="priceRange"
+                  />
+                </label>
+              </div>
+              <div>
+                <label className="add-boutique-form-label">
+                  <input
+                    className="add-boutique-field"
+                    type="text"
+                    onChange={(e) => setImageUrl(e.target.value)}
+                    value={imageUrl}
+                    placeholder="Image URL"
+                    name="imageUrl"
+                  />
+                </label>
+              </div>
+              <div className="add-boutique-button-container">
+                <button
+                  disabled={validationErrors.length > 0}
+                  className="add-boutique-button"
+                  type="submit"
+                >
+                  Create Boutique
+                </button>
+              </div>
+            </main>
+          </form>
         </div>
-        <div className="error-message-container">
-          <ul className="add-boutique-form-errors-ul">
-            {validationErrors.map((validationError) => (
-              <li className="add-boutique-form-errors-li" key={validationError}>{validationError}</li>
-            ))}
-          </ul>
-        </div>
-        <form className="add-boutique-form" onSubmit={boutiqueSubmitted}>
-          <main className="fields-container">
-          <div className="add-boutique-form-label">
-          <label >
-            <input
-              className="add-boutique-field"
-              type="text"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-              placeholder="Boutique Name"
-              name="name"
-            />
-          </label>
-          </div>
-          <div>
-          <label className="add-boutique-form-label">
-            <input
-              className="add-boutique-field"
-              type="text"
-              onChange={(e) => setCountry(e.target.value)}
-              value={country}
-              placeholder="Country"
-              name="country"
-            />
-          </label>
-          </div>
-          <div>
-          <label className="add-boutique-form-label">
-            <input
-              className="add-boutique-field"
-              type="text"
-              onChange={(e) => setCity(e.target.value)}
-              value={city}
-              placeholder="City"
-              name="city"
-            />
-          </label>
-          </div>
-          <div>
-          <label className="add-boutique-form-label">
-            <input
-              className="add-boutique-field"
-              type="text"
-              onChange={(e) => setAddress(e.target.value)}
-              value={address}
-              placeholder="Address"
-              name="address"
-            />
-          </label>
-          </div>
-          <div>
-          <label className="add-boutique-form-label">
-            <input
-              className="add-boutique-field"
-              type="text"
-              onChange={(e) => setPriceRange(e.target.value)}
-              value={priceRange}
-              placeholder="Price Range"
-              name="priceRange"
-            />
-          </label>
-          </div>
-          <div>
-          <label className="add-boutique-form-label">
-            <input
-              className="add-boutique-field"
-              type="text"
-              onChange={(e) => setImageUrl(e.target.value)}
-              value={imageUrl}
-              placeholder="Image URL"
-              name="imageUrl"
-            />
-          </label>
-          </div>
-          <div className="add-boutique-button-container">
-          <button disabled={validationErrors.length > 0} id="add-boutique-button"  type="submit">
-            Create Boutique
-          </button>
-          </div>
-          </main>
-        </form>
-      </div>
-      
       </main>
     )
   );

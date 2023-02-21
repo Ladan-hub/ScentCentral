@@ -152,7 +152,7 @@ const CreatePerfumeForm = () => {
                   id="perfume-add-boutique-button"
                   type="submit"
                 >
-                  Create Perfume!
+                  Create Perfume
                 </button>
               </div>
             </main>

@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: 'Open Baskerville';
+    src: url('../../context/OpenBaskerville-0.0.53.otf');
+}
 .owned-boutiques-container{
     margin: 3%;
     display: flex;
