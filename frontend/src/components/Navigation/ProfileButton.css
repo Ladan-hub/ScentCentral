@@ -18,8 +18,8 @@
     /* background-color: red; */
     border-radius: 2px;
     /* top: 100px;*/
-    right: 137px; 
-    bottom: 30px;
+    right: 110px; 
+    bottom: 22px;
     position: absolute;
     z-index: 10;
     padding: 10px;
@@ -28,24 +28,36 @@
     
 }
 
-
 .logout-button-li{
     list-style: none;
 }
 
 .logout-button{
-    /* border: none;
-    color: white;
-    background-image: linear-gradient(to right, rgb(255, 90, 95), rgb(250,90,255));
-    height: 30px;
-    border-radius: 5px; */
+    font-family: 'Open Baskerville';
     text-decoration: none;
-    /* font-family: sans-serif; */
-    color: black;
+    font-weight: bold;
+    background: #ffffff;
+    color: #000000;
     font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 4px;
-    margin-bottom: 10px;
+    border: 1px solid #111111;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
+    padding-right: 45px;
+}
+
+.my-bookings-button{
+    font-family: 'Open Baskerville';
+    text-decoration: none;
+    font-weight: bold;
+    background: #ffffff;
+    color: #000000;
+    font-size: medium;
+    border: 1px solid #111111;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
+
 }

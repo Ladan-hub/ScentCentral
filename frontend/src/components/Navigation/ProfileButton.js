@@ -49,7 +49,7 @@ function ProfileButton({ user }) {
           </div>
           <div className="logout-button-li">
           
-            <button className="logout-button" onClick={myBookings}>My Bookings</button>
+            <button className="my-bookings-button" onClick={myBookings}>My Bookings</button>
     
           </div>
         {/* </ul> */}
