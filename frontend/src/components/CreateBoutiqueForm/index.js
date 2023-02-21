@@ -109,6 +109,10 @@ const CreateBoutiqueForm = () => {
 
   return (
     loggedInUser && (
+      <>
+      <div className="form-title-banner">
+        <h1 className="form-banner-text">Create a boutique</h1>
+      </div>
       <main className="form-root">
         <div className="boutique-form-container">
           <div className="label-create-boutique">
@@ -213,6 +217,7 @@ const CreateBoutiqueForm = () => {
           </form>
         </div>
       </main>
+      </>
     )
   );
 };
