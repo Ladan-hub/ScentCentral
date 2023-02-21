@@ -24,7 +24,7 @@ const OwnedBoutiques = () => {
   return (
    <>
       <section className="title">
-        <h2 className="welcome-message">Welcome to your Boutiques!</h2>
+        <h1 className="welcome-message">Welcome to your Boutiques!</h1>
         </section>
       <div className="add-new-boutique-container">
         <NavLink className="add-new-boutique-navlink" to="/new">
