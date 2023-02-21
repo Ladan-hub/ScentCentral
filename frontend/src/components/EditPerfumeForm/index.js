@@ -91,11 +91,12 @@ const EditPerfumeForm = () => {
 
   return (
     loggedInUser && (
-      <main className="form-root">
+      <>
+      <div className="form-title-banner">
+        <h1 className="form-banner-text">Edit Perfume</h1>
+      </div>
+      <main className="edit-perfume-form-root">
       <div className="boutique-form-container">
-        <div className="edit-perfume-container">
-        <h1 className="add-boutique">Edit Perfume</h1>
-        </div>
         <div className="error-message-container">
           <ul className="add-boutique-form-errors-ul">
             {validationErrors.map((validationError) => (
@@ -103,10 +104,10 @@ const EditPerfumeForm = () => {
             ))}
           </ul>
         </div>
-        <form className="add-boutique-form" onSubmit={editedPerfumeSubmitted}>
+        <form className="edit-perfume-form" onSubmit={editedPerfumeSubmitted}>
           <main className="fields-container">
-          <div className="add-boutique-form-label">
-          <label >
+          
+          <label className="form-label" >
             <input
               className="add-boutique-field"
               type="text"
@@ -116,9 +117,8 @@ const EditPerfumeForm = () => {
               name="name"
             />
           </label>
-          </div>
-          <div>
-          <label className="add-boutique-form-label">
+         
+          <label className="form-label">
             <input
               className="add-boutique-field"
               type="text"
@@ -128,9 +128,9 @@ const EditPerfumeForm = () => {
               name="numberAvailable"
             />
           </label>
-          </div>
-          <div>
-          <label className="add-boutique-form-label">
+       
+   
+          <label className="form-label">
             <input
               className="add-boutique-field"
               type="text"
@@ -140,10 +140,10 @@ const EditPerfumeForm = () => {
               name="perfumeImgUrl"
             />
           </label>
-          </div>
+
           <div className="add-boutique-button-container">
           <button disabled={validationErrors.length > 0} id="edit-perfume-button"  type="submit">
-            Edit Perfume!
+            Edit Perfume
           </button>
           </div>
           </main>
@@ -151,6 +151,7 @@ const EditPerfumeForm = () => {
       </div>
       
       </main>
+      </>
     )
   );
 };
