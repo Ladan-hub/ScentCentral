@@ -115,9 +115,6 @@ const CreateBoutiqueForm = () => {
       </div>
       <main className="form-root">
         <div className="boutique-form-container">
-          <div className="label-create-boutique">
-            <h1 className="add-boutique">Create a Boutique</h1>
-          </div>
           <div className="error-message-container">
             <ul className="add-boutique-form-errors-ul">
               {validationErrors.map((validationError) => (
@@ -131,9 +128,9 @@ const CreateBoutiqueForm = () => {
             </ul>
           </div>
           <form className="add-boutique-form" onSubmit={boutiqueSubmitted}>
-            <main className="fields-container">
-              <div className="add-boutique-form-label">
-                <label>
+            
+              
+                <label className="form-label">
                   <input
                     className="add-boutique-field"
                     type="text"
@@ -143,9 +140,10 @@ const CreateBoutiqueForm = () => {
                     name="name"
                   />
                 </label>
-              </div>
-              <div>
-                <label className="add-boutique-form-label">
+                
+           
+             
+                <label className="form-label">
                   <input
                     className="add-boutique-field"
                     type="text"
@@ -155,9 +153,9 @@ const CreateBoutiqueForm = () => {
                     name="country"
                   />
                 </label>
-              </div>
-              <div>
-                <label className="add-boutique-form-label">
+          
+             
+                <label className="form-label">
                   <input
                     className="add-boutique-field"
                     type="text"
@@ -167,9 +165,9 @@ const CreateBoutiqueForm = () => {
                     name="city"
                   />
                 </label>
-              </div>
-              <div>
-                <label className="add-boutique-form-label">
+             
+              
+                <label className="form-label">
                   <input
                     className="add-boutique-field"
                     type="text"
@@ -179,9 +177,8 @@ const CreateBoutiqueForm = () => {
                     name="address"
                   />
                 </label>
-              </div>
-              <div>
-                <label className="add-boutique-form-label">
+              
+                <label className="form-label">
                   <input
                     className="add-boutique-field"
                     type="text"
@@ -191,9 +188,9 @@ const CreateBoutiqueForm = () => {
                     name="priceRange"
                   />
                 </label>
-              </div>
-              <div>
-                <label className="add-boutique-form-label">
+       
+        
+                <label className="form-label">
                   <input
                     className="add-boutique-field"
                     type="text"
@@ -203,7 +200,7 @@ const CreateBoutiqueForm = () => {
                     name="imageUrl"
                   />
                 </label>
-              </div>
+           
               <div className="add-boutique-button-container">
                 <button
                   disabled={validationErrors.length > 0}
@@ -213,7 +210,7 @@ const CreateBoutiqueForm = () => {
                   Create Boutique
                 </button>
               </div>
-            </main>
+            
           </form>
         </div>
       </main>

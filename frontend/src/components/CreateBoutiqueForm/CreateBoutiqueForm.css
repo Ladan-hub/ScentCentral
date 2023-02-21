@@ -1,20 +1,13 @@
-.form-root{
+.form-title-banner{
+    position: relative;
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 70px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #111111;
-    
-}
+    }
 
-.form-title-banner{
-position: relative;
-display: inline-block;
-background-color: #ffffff;
-padding: 70px;
-display: flex;
-flex-direction: row;
-justify-content: center;
-}
 
 .form-banner-text{
     font-family: "Open Baskerville";
@@ -23,21 +16,30 @@ justify-content: center;
     font-weight:lighter;
     letter-spacing: 1px;
     line-height: 1.2;
-  
-
     text-transform: uppercase;
+}
 
+
+.form-root{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #111111;  
 }
 
 .boutique-form-container{
     border: solid black;
     padding: 20px;
     margin-top: 30px;
-    border-radius: 10px;
-    width: 400px;
+    border-radius: 1px;
+    width: 40%;
     background-color:#ffffff;
-    
+}
 
+.form-label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .add-perfume-container {
@@ -45,6 +47,7 @@ justify-content: center;
     flex-direction: row;
     justify-content: center;
 }
+
 .error-message-container{
     margin-left: -20px;
     margin-bottom: 30px;
@@ -57,10 +60,12 @@ justify-content: center;
     font-size: smaller;
 }
 
-.label-create-boutique{
+
+.add-boutique-form{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    
 }
 
 .fields-container{
@@ -69,9 +74,6 @@ justify-content: center;
     justify-content: center;
 }
 
-.add-boutique-form-label{
-    margin-left: 115px;
-}
 
 .add-boutique-button-container{
     display: flex;
@@ -82,8 +84,10 @@ justify-content: center;
 
 .add-boutique-field{
     padding: 10px;
-    border-radius: 10px;
+    width: 200px;
+    border-radius: 0.5px;
     margin-bottom: 10px;
+    border:#111111 solid 0.1px;
 
 }
 
@@ -92,19 +96,6 @@ justify-content: center;
     font-size: larger;
     font-weight: lighter;
 }
-
-/* .perfume-add-boutique-button{
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: black;
-    font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 10px;
-    margin-right: 5px;
-} */
 
 .add-boutique-button{
     font-family: 'Open Baskerville';
