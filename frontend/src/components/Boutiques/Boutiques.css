@@ -23,7 +23,6 @@ display: inline-block;
     transform: translateY(-50%);
     text-align: center;
     color: #fff;
-    /* font-family: 'Lora', serif; */
     font-family: "Open Baskerville";
     padding: 1rem 0;
     margin-left: 1060px;
@@ -35,11 +34,10 @@ display: inline-block;
 }
 
 .our-boutiques{
-    /* font-family: var(--heading-font-family); */
     font-family: "Open Baskerville";
     font-size: 34px;
     font-style: normal;
-    font-weight: 400;
+    font-weight:lighter;
     letter-spacing: 1px;
     line-height: 1.2;
     margin-top: 50px;
@@ -58,33 +56,30 @@ display: inline-block;
   }
 
 .boutiques-container{
-
-    padding: 3px;
-    
+    padding: 3px; 
 }
 
 
 .boutique-image {
     width: 310px;
     height: 290px;
-  
     cursor: pointer;
 }
 
 .boutique-info-container{
     margin-top: 0.5em;
-    /* margin-left: 3em; */
     margin-left: 40px;
 }
 
 .boutique-name{
-    /* font-family: 'Lora', serif; */
     font-family: "Open Baskerville";
+    font-style: normal;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
     cursor: pointer;
     margin-bottom: 5px;
     font-weight: bold;
     text-transform: uppercase;
-   
 }
 
 .boutique-country-city{
@@ -103,14 +98,11 @@ display: inline-block;
     cursor: default;
     margin-top: 5px;
     margin-bottom: 5px;
-
-
 }
 
 .footer{
     background-color: #111111;
     padding: 20px;
-
 }
 
 
