@@ -84,16 +84,18 @@ body {
 }
 
 .go-to-create-booking-button{
-    /* margin-left: 39.9px; */
-    text-decoration: none;
     font-family: 'Open Baskerville';
+    margin-left: 5px;
+    text-decoration: none;
     font-weight: bold;
-    color: black;
+    background: #ffffff;
+    color: #000000;
     font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 10px;
+    border: 1px solid #111111;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
 
 }
 
@@ -108,17 +110,18 @@ body {
 }
 
 .review-button{
-    margin-left: 20px;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: black;
-    font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 10px;
     font-family: 'Open Baskerville';
+    margin-left: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    background: #ffffff;
+    color: #000000;
+    font-size: medium;
+    border: 1px solid #111111;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
  
 }
 
