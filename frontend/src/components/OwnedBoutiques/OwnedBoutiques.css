@@ -15,9 +15,15 @@
 }
 
 .welcome-message{
-    margin-left: 20px;
-    font-family: sans-serif;
-    color: #111111;
+    font-family: "Open Baskerville";
+    font-size: 30px;
+    font-weight:lighter;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
@@ -30,14 +36,18 @@
 .add-new-boutique-text{
     margin-left: 20px;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Open Baskerville';
+    margin-left: 2px;
+    text-decoration: none;
     font-weight: bold;
-    color: black;
+    background: #ffffff;
+    color: #000000;
     font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 10px;
+    border: 1px solid #111111;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
     
 }
 
