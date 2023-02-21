@@ -111,7 +111,7 @@ const CreateBoutiqueForm = () => {
     loggedInUser && (
       <>
       <div className="form-title-banner">
-        <h1 className="form-banner-text">Create a boutique</h1>
+        <h1 className="form-banner-text">Create  boutique</h1>
       </div>
       <main className="form-root">
         <div className="boutique-form-container">

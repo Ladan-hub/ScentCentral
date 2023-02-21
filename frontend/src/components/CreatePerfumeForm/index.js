@@ -91,11 +91,13 @@ const CreatePerfumeForm = () => {
 
   return (
     loggedInUser && (
+      <>
+      <div className="form-title-banner">
+        <h1 className="form-banner-text">Create Perfume</h1>
+      </div>
       <main className="form-root">
         <div className="boutique-form-container">
-          <div className="add-perfume-container">
-          <h1 className="add-boutique">Create a Perfume</h1>
-          </div>
+    
           <div className="error-message-container">
             <ul className="add-boutique-form-errors-ul">
               {validationErrors.map((validationError) => (
@@ -110,8 +112,8 @@ const CreatePerfumeForm = () => {
           </div>
           <form className="add-boutique-form" onSubmit={perfumeSubmitted}>
             <main className="fields-container">
-              <div className="add-boutique-form-label">
-                <label>
+          
+                <label className="form-label">
                   <input
                     className="add-boutique-field"
                     type="text"
@@ -121,9 +123,9 @@ const CreatePerfumeForm = () => {
                     name="name"
                   />
                 </label>
-              </div>
-              <div>
-                <label className="add-boutique-form-label">
+      
+          
+                <label className="form-label">
                   <input
                     className="add-boutique-field"
                     type="text"
@@ -133,9 +135,8 @@ const CreatePerfumeForm = () => {
                     name="numberAvailable"
                   />
                 </label>
-              </div>
-              <div>
-                <label className="add-boutique-form-label">
+             
+                <label className="form-label">
                   <input
                     className="add-boutique-field"
                     type="text"
@@ -145,7 +146,7 @@ const CreatePerfumeForm = () => {
                     name="perfumeImgUrl"
                   />
                 </label>
-              </div>
+      
               <div className="add-boutique-button-container">
                 <button
                   disabled={validationErrors.length > 0}
@@ -159,6 +160,7 @@ const CreatePerfumeForm = () => {
           </form>
         </div>
       </main>
+      </>
     )
   );
 };
