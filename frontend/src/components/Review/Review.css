@@ -1,28 +1,43 @@
+@font-face {
+    font-family: 'Open Baskerville';
+    src: url('../../context/OpenBaskerville-0.0.53.otf');
+}
+
+
 .review-label{
-    font-family: sans-serif;
-    margin-left: 20px;
+    font-family: "Open Baskerville";
+    font-size: 30px;
+    font-style: normal;
+    font-weight:lighter;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-top: 80px;
+    margin-right: 35px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
 .reviews-container{
     margin-bottom: 10px;
-    margin-left: 20px;
     border: solid lightgrey;
-    border-radius: 10px;
-    max-width: 50%;
+    width:fit-content;
     overflow-y: scroll; 
+    margin-right: 16px;
 }
 
 .one-review{
-    font-family: sans-serif;
-    margin-left: 20px;
+    font-family: "Open Baskerville";
+    margin-left: 30px;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .buttons-container{
     display: flex;
     flex-direction: row;
+    margin-bottom: 30px;
 }
 .delete-review-button-container{
     margin-right: 10px;
@@ -35,29 +50,32 @@
 }
 
 .delete-review-button{
+    font-family: 'Open Baskerville';
     text-decoration: none;
-    font-family: sans-serif;
     font-weight: bold;
-    color: black;
+    background: #ffffff;
+    color: #000000;
     font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 10px;
-    margin-right: 5px;
+    border: 1px solid #111111;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
 }
 
 .edit-review-button{
+    font-family: 'Open Baskerville';
     text-decoration: none;
-    font-family: sans-serif;
     font-weight: bold;
-    color: black;
+    background: #ffffff;
+    color: #000000;
     font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 10px;
-    margin-right: 5px;
+    border: 1px solid #111111;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
+    margin-right: 20px;
 }
 
 .boutique-name{

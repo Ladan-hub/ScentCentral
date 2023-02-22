@@ -48,7 +48,7 @@ const Review = () => {
     return null;
   }
   return (
-    <div>
+    <div className="reviews-root">
       {loggedInUser?.id === boutique?.userId ? null : null}
       <h2 className="review-label">Reviews</h2>
       {reviews.map((review) => (
