@@ -6,12 +6,15 @@
 
 
 .review-form-container{
-
     border: solid black;
     padding: 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-    width: 258px;
+
+    border-radius: 3px;
+    width: 40%;
+    background-color:#ffffff;
+}
+
+.add-review-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,67 +33,50 @@
 }
 
 .add-review-form-errors-li{
-    font-family: sans-serif;
-    font-weight: lighter;
-    font-size: smaller;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #cd3030;
+    margin-bottom: 8px;
+    font-weight:lighter;
+    font-size:small;
+    padding: 5px;
 }
 
-.add-review-textarea{
+
+.review-field{
     padding: 10px;
-    border-radius: 10px;
+    width: 200px;
+    border-radius: 0.5px;
     margin-bottom: 10px;
+    border:#111111 solid 0.1px;
     scroll-behavior: smooth;
 
 }
 
-.review-field{
-    font-family: sans-serif;
-    padding: 20px;
-    /* margin-left: 2px; */
-
-}
-
-.star-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 15px;
-
-}
-
-
-/* .add-review-button-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-} */
 
 .add-new-review-button{
+    font-family: 'Open Baskerville';
     text-decoration: none;
-    font-family: sans-serif;
     font-weight: bold;
-    color: black;
+    background: #ffffff;
+    color: #000000;
     font-size: medium;
-    background-color: white;
-    border: solid lightgrey 1px;
-    border-radius: 10px;
-    padding: 10px;
-    margin-right: 5px;
+    border: 1px solid #111111;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 0.1rem;
+    margin-top: 10px;
+cursor: pointer;
 
 }
 
-.review-error-messages-li{
-    /* list-style: none; */
-    color: black;
-    font-weight: lighter;
-    padding: 5px;
-}
 
-.stars-and-button-container{
-    margin-left: 60px;
+.review-button-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    width: 150px;
+    margin-right: -30px;
 }
 
