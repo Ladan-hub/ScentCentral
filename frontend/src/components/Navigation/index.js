@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import './Navigation.css';
-import logo from "../../context/apple-touch-icon.png";
+import logo from "../../context/android-chrome-512x512.png";
 
 
 
