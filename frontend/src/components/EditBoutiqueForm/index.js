@@ -27,31 +27,41 @@ const EditBoutiqueForm = () => {
   // Validation Errors
   useEffect(() => {
     const errors = [];
-    if (name.length < 2) {
+    if (
+      name === "" &&
+      country === "" &&
+      city === "" &&
+      address === "" &&
+      priceRange === "" &&
+      imageUrl === ""
+    ) {
+      errors.push("");
+    }
+    else if (name.length < 2) {
       errors.push("Name must be at least 2 characters");
     }
-    if (name.length > 250) {
-      errors.push("Name must be less than 250 characters");
+    else if (name.length > 250) {
+      errors.push("Name must be less than 251 characters");
     }
-    if (country.length < 2) {
-      errors.push("Country must be at least 4 characters");
+    else if (country.length < 2) {
+      errors.push("Country must be at least 2 characters");
     }
-    if (country.length > 56) {
-      errors.push("Country must be less than 56 characters");
+    else if (country.length > 56) {
+      errors.push("Country must be less than 57 characters");
     }
-    if (city.length < 1) {
+    else if (city.length < 1) {
       errors.push("City must be at least one character");
     }
-    if (city.length > 85) {
-      errors.push("City must be less than 85 characters");
+    else if (city.length > 85) {
+      errors.push("City must be less than 86 characters");
     }
-    if (address.length < 9) {
+    else if (address.length < 9) {
       errors.push("Address must be at least 9 characters");
     }
-    if (address.length > 85) {
-      errors.push("Address must be less than 85 characters");
+    else if (address.length > 85) {
+      errors.push("Address must be less than 86 characters");
     }
-    if (
+    else if (
       priceRange !== "$" &&
       priceRange !== "$$" &&
       priceRange !== "$$$" &&
@@ -60,24 +70,24 @@ const EditBoutiqueForm = () => {
     ) {
       errors.push("Price Range must be $ up to $$$$");
     }
-    if (imageUrl.length < 10) {
-      errors.push("Perfume image URL must be at least 10 characters");
+    else if (imageUrl.length < 10) {
+      errors.push("Boutique image URL must be at least 10 characters");
     }
-    if (imageUrl.length > 500) {
-      errors.push("Perfume image URL must be less than 500 characters");
+    else if (imageUrl.length > 500) {
+      errors.push("Boutique image URL must be less than 501 characters");
     }
-    if (imageUrl.length > 500) {
-      errors.push("Perfume image URL must be less than 500 characters");
-    }
-    if (
-      !imageUrl.endsWith("jpg") &&
-      !imageUrl.endsWith("png") &&
-      !imageUrl.endsWith("gif")
+    // if (imageUrl.length > 500) {
+    //   errors.push("Perfume image URL must be less than 500 characters");
+    // }
+    else if (
+      !imageUrl.endsWith(".jpg") &&
+      !imageUrl.endsWith(".png") &&
+      !imageUrl.endsWith(".gif")
     ) {
-      errors.push("Image URL must end with jpg, png, or gif");
+      errors.push("Image URL must end with .jpg, .png, or .gif");
     }
-    if((!imageUrl.startsWith("http://")) && (!imageUrl.startsWith("https://"))) {
-      errors.push("Image URL must start with http:// or https://")
+    else if (!imageUrl.startsWith("http://") && !imageUrl.startsWith("https://")) {
+      errors.push("Image URL must start with http:// or https://");
     }
     setValidationErrors(errors);
   }, [name, country, city, address, priceRange, imageUrl]);
