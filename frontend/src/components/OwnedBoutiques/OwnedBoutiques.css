@@ -19,7 +19,8 @@
 
 .welcome-message{
     font-family: "Open Baskerville";
-    font-size: 30px;
+    font-size: 34px;
+    font-style: normal;
     font-weight:lighter;
     letter-spacing: 1px;
     line-height: 1.2;

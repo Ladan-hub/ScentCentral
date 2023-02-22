@@ -50,16 +50,23 @@
 }
 
 .error-message-container{
-    margin-left: -20px;
-    margin-bottom: 30px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
+
 
 .add-boutique-form-errors-li{
-    font-family: sans-serif;
-    font-weight: lighter;
-    font-size: smaller;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #cd3030;
+    margin-bottom: 8px;
+    font-weight:lighter;
+    font-size:small;
+    padding: 5px;
 }
+
 
 
 .add-boutique-form{
@@ -114,10 +121,4 @@
 
 }
 
-.add-boutique-form-errors-li{
-    /* list-style: none; */
-    color: black;
-    font-weight: lighter;
-    padding: 5px;
-}
 

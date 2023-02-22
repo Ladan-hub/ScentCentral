@@ -74,21 +74,12 @@ const CreateBookingForm = () => {
 
   return (
     loggedInUser && (
+      <>
+      <div className="form-title-banner">
+        <h1 className="form-banner-text">Book Appointment</h1>
+      </div>
       <main className="form-root">
-        {/* {bookings.map((booking) => (
-          <div className="no-booking">
-            {loggedInUser?.id === booking?.userId ? (
-              <h1>You already have a booking for this boutique at {booking.startDate}</h1>
-
-            ) :null  }
-
-          </div>
-        ))} */}
-
         <div className="booking-form-container">
-          <div className="book-appointment-label">
-            <h1 className="book-appointment">Book an Appointment</h1>
-          </div>
           <div className="error-message-container">
             <ul className="add-boutique-form-errors-ul">
               {validationErrors.map((validationError) => (
@@ -102,8 +93,8 @@ const CreateBookingForm = () => {
             </ul>
           </div>
           <form className="add-booking-form" onSubmit={bookingSubmitted}>
-            <main className="fields-container">
-              <div className="pick-a-date">
+      
+              <label className="form-label">
                 <input
                   id="date-input-field"
                   type="datetime-local"
@@ -117,7 +108,7 @@ const CreateBookingForm = () => {
                   value={startDate}
                   name="startDate"
                 />
-              </div>
+                </label>
               <div className="add-booking-button-container">
                 <button
                   type="submit"
@@ -127,10 +118,10 @@ const CreateBookingForm = () => {
                   Book Appointment
                 </button>
               </div>
-            </main>
           </form>
         </div>
       </main>
+      </>
     )
   );
 };

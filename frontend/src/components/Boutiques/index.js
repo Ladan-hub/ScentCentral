@@ -21,9 +21,6 @@ const Boutiques = () => {
 
   return (
     <>
-      {/* <div className="share-your-boutiques-container">
-        <h1 className="share-your-boutiques-text">Share your perfume boutiques with the world!</h1>
-        </div> */}
       <div className="box">
         <img
           className="main-banner"

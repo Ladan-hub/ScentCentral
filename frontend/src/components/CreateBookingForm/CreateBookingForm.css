@@ -1,15 +1,18 @@
-.form-root{
+.booking-form-root{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    background-color: #111111;  
 }
 
 .booking-form-container{
     border: solid black;
     padding: 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-    width: 400px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 3px;
+    width: 40%;
+    background-color:#ffffff;
 }
 
 .book-appointment-label{
@@ -60,5 +63,4 @@
     border-radius: 10px;
     padding: 10px;
     margin-right: 5px;
-
 }

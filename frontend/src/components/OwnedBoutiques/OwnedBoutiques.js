@@ -24,7 +24,7 @@ const OwnedBoutiques = () => {
   return (
    <>
       <section className="title">
-        <h1 className="welcome-message">Welcome to your Boutiques!</h1>
+      <div> <h1 className="welcome-message">Welcome to your Boutiques</h1></div>
         </section>
       <div className="add-new-boutique-container">
         <NavLink className="add-new-boutique-navlink" to="/new">
@@ -44,11 +44,11 @@ const OwnedBoutiques = () => {
                 onError={event => {event.target.src = "https://library.tamu.edu/discovery/resources/images/default-thumbnail.jpg"}}
               />
               </div>
-              <div className="boutique-name">{boutique.name}</div>
-              <div className="boutique-country-city">
+              <h4 className="boutique-name">{boutique.name}</h4>
+              <h4 className="boutique-country-city">
                 {boutique.country}, {boutique.city}
-              </div>
-              <div className="boutique-price-range">{boutique.priceRange}</div>
+              </h4>
+              <h4 className="boutique-price-range">{boutique.priceRange}</h4>
           </main>
         ))}
    </main>
