@@ -78,7 +78,7 @@ const CreateBookingForm = () => {
       <div className="form-title-banner">
         <h1 className="form-banner-text">Book Appointment</h1>
       </div>
-      <main className="form-root">
+      <main id="form-root">
         <div className="booking-form-container">
           <div className="error-message-container">
             <ul className="add-boutique-form-errors-ul">
