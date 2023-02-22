@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Open Baskerville';
-    src: url('../../context/OpenBaskerville-0.0.53.otf');
+    src: url('../../context/OpenBaskerville-0.0.53.otf?v=1.0');
 }
 .owned-boutiques-container{
     margin: 3%;
@@ -18,7 +18,7 @@
 }
 
 .welcome-message{
-    font-family: "Open Baskerville";
+    font-family: "Open Baskerville" !important;
     font-size: 34px;
     font-style: normal;
     font-weight:lighter;

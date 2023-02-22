@@ -1,3 +1,11 @@
+#form-root{
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #111111;  
+}
+
 #date-input-field{
     padding: 10px;
     border-radius: 10px;
