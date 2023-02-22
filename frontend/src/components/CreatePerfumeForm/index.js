@@ -23,40 +23,41 @@ const CreatePerfumeForm = () => {
   // Validation Errors
   useEffect(() => {
     const errors = [];
-    if (name.length < 2) {
+    if (
+      name === "" &&
+      numberAvailable === "" &&
+      perfumeImgUrl === ""
+    ) {
+      errors.push("");
+    }
+    else if (name.length < 2) {
       errors.push("Name must be at least 2 characters");
     }
-    if (name.length > 250) {
+    else if (name.length > 250) {
       errors.push("Name must be less than 250 characters");
     }
-    if (numberAvailable.length === 0) {
+    else if (numberAvailable.length === 0) {
       errors.push("Enter the inventory number");
     }
-    // if (numberAvailable === "") {
-    //     errors.push("Number available must be between 0 and 1000")
-    // }
 
-    // console.log("THIS IS THE NUMBER", +numberAvailable);
-    // console.log(typeof +numberAvailable);
-
-    if (!Number.isInteger(parseInt(numberAvailable))) {
+    else if (!Number.isInteger(parseInt(numberAvailable))) {
       errors.push("Please enter a valid number");
     }
 
-    if (perfumeImgUrl.length < 10) {
+    else if (perfumeImgUrl.length < 10) {
       errors.push("Perfume image URL must be at least 10 characters");
     }
-    if (perfumeImgUrl.length > 500) {
+    else if (perfumeImgUrl.length > 500) {
       errors.push("Perfume image URL must be less than 501 characters");
     }
-    if (
+    else if (
       !perfumeImgUrl.endsWith(".jpg") &&
       !perfumeImgUrl.endsWith(".png") &&
       !perfumeImgUrl.endsWith(".gif")
     ) {
       errors.push("Image URL must end with .jpg, .png, or .gif");
     }
-    if (
+    else if (
       !perfumeImgUrl.startsWith("http://") &&
       !perfumeImgUrl.startsWith("https://")
     ) {

@@ -33,33 +33,48 @@ const EditPerfumeForm = () => {
   // Validation Errors
   useEffect(() => {
     const errors = [];
-    if (name.length < 2) {
+    if (
+      name === "" &&
+      numberAvailable === "" &&
+      perfumeImgUrl === ""
+    ) {
+      errors.push("");
+    }
+    else if (name.length < 2) {
       errors.push("Name must be at least 2 characters");
     }
-    if (name.length > 250) {
-      errors.push("Name must be less than 251 characters");
+    else if (name.length > 250) {
+      errors.push("Name must be less than 250 characters");
     }
-    if (numberAvailable.length === 0) {
-        errors.push("Enter the inventory number")
+    else if (numberAvailable.length === 0) {
+      errors.push("Enter the inventory number");
     }
-    // if (numberAvailable === "") {
-    //     errors.push("Number available must be between 0 and 1000")
-    // }
-    
-    if (perfumeImgUrl.length < 10) {
+
+    else if (!Number.isInteger(parseInt(numberAvailable))) {
+      errors.push("Please enter a valid number");
+    }
+
+    else if (perfumeImgUrl.length < 10) {
       errors.push("Perfume image URL must be at least 10 characters");
     }
-    if (perfumeImgUrl.length > 500) {
+    else if (perfumeImgUrl.length > 500) {
       errors.push("Perfume image URL must be less than 501 characters");
     }
-    if ((!perfumeImgUrl.endsWith(".jpg")) && (!perfumeImgUrl.endsWith(".png")) && (!perfumeImgUrl.endsWith(".gif"))) {
+    else if (
+      !perfumeImgUrl.endsWith(".jpg") &&
+      !perfumeImgUrl.endsWith(".png") &&
+      !perfumeImgUrl.endsWith(".gif")
+    ) {
       errors.push("Image URL must end with .jpg, .png, or .gif");
     }
-    if((!perfumeImgUrl.startsWith("http://")) && (!perfumeImgUrl.startsWith("https://"))) {
-      errors.push("Image URL must start with http:// or https://")
+    else if (
+      !perfumeImgUrl.startsWith("http://") &&
+      !perfumeImgUrl.startsWith("https://")
+    ) {
+      errors.push("Image URL must start with http:// or https://");
     }
     setValidationErrors(errors);
-  }, [name,numberAvailable, perfumeImgUrl]);
+  }, [name, numberAvailable, perfumeImgUrl]);
 
 
 
