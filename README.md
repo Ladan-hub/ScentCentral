@@ -26,14 +26,6 @@ Live Link to ScentCentral: https://scentcentral.herokuapp.com/
 
 <img width="1440" alt="Screen Shot 2023-01-18 at 6 29 56 PM" src="https://user-images.githubusercontent.com/77522504/213205434-b7f85ad3-6fdb-41d3-a887-198d67a0e48e.png">
 
-# Code I'm Proud Of
-
-<img width="1030" alt="Screen Shot 2023-02-13 at 11 11 06 PM" src="https://user-images.githubusercontent.com/77522504/218558502-262beee4-06eb-4f2a-bb94-2196bc2a1961.png">
-
-
-
-
-
 
 # Key Features 
 
