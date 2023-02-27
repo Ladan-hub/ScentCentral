@@ -24,7 +24,7 @@
     border: solid lightgrey;
     width:fit-content;
     overflow-y: scroll; 
-    margin-right: 16px;
+    padding-right: 25px;
 }
 
 .one-review{
