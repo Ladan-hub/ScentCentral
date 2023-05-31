@@ -35,7 +35,7 @@ function LoginForm() {
   };
 
   return (
-    <main className="login-form-root">
+    <main id="login-form-root">
       <div className="form-container-login">
     <form id="login-form" onSubmit={handleSubmit}>
     

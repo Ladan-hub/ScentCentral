@@ -1,10 +1,17 @@
-.form-root{
+.form-root {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
+  }
 
-.form-container{
+  #sign-up-form-root{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .form-container {
     border: solid black;
     padding: 20px;
     margin-top: 30px;
@@ -13,28 +20,28 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 350px;
-    width: 300px;
-}
-
-.label{
+    min-height: 350px; /* Set a minimum height for the container */
+  width: 300px;
+  }
+  
+  .label {
     padding: 7px;
     margin-bottom: 7px;
-}
-
-.input{
+  }
+  
+  .input {
     border: solid black;
     border-radius: 10px;
     padding: 7px;
-}
-
-.signup-button-container{
+  }
+  
+  .signup-button-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-
-.signup-button{
+  }
+  
+  .signup-button {
     font-family: 'Open Baskerville';
     text-decoration: none;
     font-weight: bold;
@@ -46,5 +53,4 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     border-radius: 0.1rem;
-
-}
+  }

@@ -1,3 +1,36 @@
+/* #login-form-root{
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.login-fields-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+} */
+
+
+#login-form-root {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.login-fields-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    flex: 1; /* Take up remaining space */
+    padding: 20px; /* Adjust padding as needed */
+    margin: 0 20px; /* Add some margin between the container and the form */
+}
+
 .login-button{
     font-family: 'Open Baskerville';
     text-decoration: none;
@@ -10,6 +43,7 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     border-radius: 0.1rem;
+    margin-bottom: 5px;
 }
 
 .demo-container{
@@ -34,19 +68,10 @@
 }
 
 
-.login-form-root{
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
 
-.login-fields-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
+
 
 .fields-label{
     padding: 7px;
