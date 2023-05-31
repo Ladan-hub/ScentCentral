@@ -63,8 +63,12 @@
 }
 
 .error-message{
-    color: black;
-    /* list-style: none; */
-    padding-right: 40px;
-    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #cd3030;
+    margin-bottom: 8px;
+    font-weight:lighter;
+    font-size:small;
+    padding: 5px;
 }
