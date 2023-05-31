@@ -59,6 +59,7 @@ body{
     font-size: 1.1rem;
     color: #ffffff;
     white-space: nowrap;
+    margin-right: -10px;
 }
 
 .NavLink:hover {
