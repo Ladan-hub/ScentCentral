@@ -50,9 +50,9 @@ const OwnedBookings = () => {
       </section>
       {bookings.length === 0 ? (
         <div className="no-bookings-owned-container">
-          <h1 className="no-bookings-owned">
+          <h2 className="no-bookings-owned">
             You Currently Don't Own Any Bookings!
-          </h1>
+          </h2>
         </div>
       ) : (
         <main className="owned-bookings-container">
