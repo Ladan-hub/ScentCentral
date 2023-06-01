@@ -21,6 +21,12 @@
     justify-content: center;
 }
 
+.form-container-login{
+min-height: 318px; /* Set a minimum height for the container */
+  width: 250px;
+}
+
+
 .login-fields-container {
     display: flex;
     flex-direction: column;
