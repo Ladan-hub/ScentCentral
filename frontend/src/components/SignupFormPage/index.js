@@ -35,7 +35,7 @@ function SignupFormPage() {
       
       <div className="error-message-container">
       <ul>
-        {errors.map((error, idx) => <li className="error-message" key={idx}>{error}</li>)}
+        {errors.map((error, idx) => <li id="error-message" key={idx}>{error}</li>)}
       </ul>
       </div>
       <main className="sign-up-fields-container">

@@ -23,6 +23,15 @@
     min-height: 350px; /* Set a minimum height for the container */
   width: 300px;
   }
+
+  #error-message{
+    list-style: none;
+    color: #cd3030;
+    margin-bottom: 8px;
+    font-weight: lighter;
+    font-size: small;
+    margin-right: 30px;
+  }
   
   .label {
     padding: 7px;
