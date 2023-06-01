@@ -38,7 +38,7 @@ function SignupFormPage() {
         {errors.map((error, idx) => <li className="error-message" key={idx}>{error}</li>)}
       </ul>
       </div>
-      <main className="login-fields-container">
+      <main className="sign-up-fields-container">
       <div className="fields-label">
       <label>
         <input className="input"

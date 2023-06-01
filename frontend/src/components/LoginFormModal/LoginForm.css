@@ -42,7 +42,7 @@
     padding: 14px;
     text-transform: uppercase;
     font-size: 0.8rem;
-    border-radius: 0.1rem;
+    border-radius: 0.3rem;
     margin-bottom: 5px;
 }
 
@@ -64,13 +64,8 @@
     padding: 14px;
     text-transform: uppercase;
     font-size: 0.8rem;
-    border-radius: 0.1rem;
+    border-radius: 0.3rem;
 }
-
-
-
-
-
 
 
 .fields-label{
@@ -87,13 +82,21 @@
     padding: 7px;
 }
 
-.error-message{
-    margin: 0;
-    padding: 0;
+
+#error-message-container {
+  text-align: left; /* Align text to the right */
+
+}
+
+
+#error-message{
     list-style: none;
     color: #cd3030;
     margin-bottom: 8px;
-    font-weight:lighter;
-    font-size:small;
-    padding: 5px;
+    font-weight: lighter;
+    font-size: small;
+    margin-right: 30px;
+    
+
+    
 }
