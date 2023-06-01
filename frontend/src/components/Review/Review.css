@@ -22,8 +22,9 @@
 .reviews-container{
     margin-bottom: 10px;
     border: solid lightgrey;
+    border-radius: 0.3rem;
     width:fit-content;
-    overflow-y: scroll; 
+    height: fit-content;
     padding-right: 25px;
 }
 
