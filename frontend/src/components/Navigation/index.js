@@ -13,21 +13,6 @@ function Navigation({ isLoaded }){
   const loggedInUser = useSelector(state => state.session.user);
 
   let sessionLinks;
-  // if (sessionUser) {
-  //   sessionLinks = (
-      
-  //     <ProfileButton className="profile-button" user={sessionUser} />
-      
-    
-  //   );
-  // } else {
-  //   sessionLinks = (
-  //     <>
-  //       <LoginFormModal />
-  //       <NavLink to="/signup">Sign Up</NavLink>
-  //     </>
-  //   );
-  // }
 
   return (
     <>
@@ -44,9 +29,9 @@ function Navigation({ isLoaded }){
     
     <section className='become-a-host-and-profile-button'>
     <div className='become-a-host-container'>
-      {/* <li className='li-element-become-a-host'> */}
+      
       {loggedInUser ? <NavLink  className="NavLink-add-boutique" to="/boutiques/owned">Become a Host</NavLink> : null}
-      {/* </li> */}
+      
     </div>
     
       <ul>
